@@ -10,12 +10,14 @@ const SomeHomes = () => {
     setSomeHouseData(getRandomItem(data, 6));
   }, [data]);
   return (
-    <>
+    <div className="">
       <div className="text-center mt-20 lg:mt-44">
-        <h1 className=" text-4xl lg:text-6xl font-bold">Some of Our Houses</h1>
+        <h1 className=" text-xl lg:text-6xl font-bold">Some of Our Houses</h1>
       </div>
-      <HousesList HouseData={someHouseData} />
-    </>
+      <div>
+        <HousesList HouseData={someHouseData} />
+      </div>
+    </div>
   );
 };
 

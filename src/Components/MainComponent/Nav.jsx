@@ -62,7 +62,7 @@ const Nav = () => {
   );
   return (
     <div className="fixed grid justify-center w-full z-[999] shadow-2xl">
-      <div className="w-[500px] md:w-[800px] lg:w-[1200px]">
+      <div className="w-[500px] lg:w-[1200px]">
         <div className="navbar bg-base-100">
           <div className="navbar-start">
             <div className="dropdown">
@@ -94,7 +94,7 @@ const Nav = () => {
               </ul>
             </div>
             <Link to={"/"}>
-              <button className="btn btn-ghost flex gap-0 text-3xl font-bold">
+              <button className="btn btn-ghost flex gap-0 text-xl lg:text-3xl font-bold">
                 <MdHomeWork />
                 <span className="text-blue-700">Rent</span>
                 <span className=" bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">

@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+
 import Banner from "./Banner";
 import { useContext, useEffect, useState } from "react";
 import { getRandomItem } from "../../utilities/GetRandomItem";
@@ -17,8 +17,8 @@ const Banners = () => {
   }, [HouseData]);
 
   return (
-    <div className="flex items-center justify-center mt-12 lg:mt-28">
-      <div className="carousel w-[500px] h-[250px] md:w-[800px] md:h-[400px] lg:w-[1100px] lg:h-[600px] rounded-3xl m-auto">
+    <div className="flex items-center justify-center mt-12 lg:mt-28 ">
+      <div className="carousel min-w-[500px] h-[250px] lg:w-[1150px] lg:h-[600px] rounded-3xl m-auto">
         {bannerData.map((banner, i) => (
           <Banner
             key={i}

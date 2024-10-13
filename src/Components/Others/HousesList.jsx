@@ -1,11 +1,10 @@
-
 import PropTypes from "prop-types";
 import HouseCard from "./HouseCard";
 
-const HousesList = ({ HouseData}) => {
+const HousesList = ({ HouseData }) => {
   return (
-    <div>
-      <div className="m-auto grid lg:grid-cols-2 gap-8 lg:gap-16 w-[500px] lg:w-[1000px] mt-5 lg:mt-10 mb-[100px] lg:mb-[200px]">
+    <div className="">
+      <div className="m-auto grid lg:grid-cols-3 gap-5 lg:gap-3 w-[500px]  lg:w-[1200px] mt-5 lg:mt-10 mb-[100px] lg:mb-[200px] justify-center">
         {HouseData.map((houseData, i) => (
           <HouseCard key={`SomeHome${i}`} houseData={houseData} />
         ))}
@@ -15,7 +14,7 @@ const HousesList = ({ HouseData}) => {
 };
 
 HousesList.propTypes = {
-    HouseData: PropTypes.object
+  HouseData: PropTypes.object,
 };
 
 export default HousesList;

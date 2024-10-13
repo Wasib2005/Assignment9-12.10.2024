@@ -4,9 +4,9 @@ import Footer from "../Components/MainComponent/Footer";
 
 const MainFrame = () => {
   return (
-    <div className="min-w-[500px] text-center">
+    <div className="text-center min-w-[500px] lg:min-w-[1210px] ">
       <Nav />
-      <div className=" m-auto lg:w-[1150px]">
+      <div className="text-center m-auto w-[500px] lg:w-[1210px]">
         <div className="pt-[75px]  min-h-[calc(100vh-70px-155px)]">
           <Outlet />
         </div>

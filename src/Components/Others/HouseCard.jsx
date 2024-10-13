@@ -4,9 +4,9 @@ const HouseCard = ({ houseData }) => {
   const { id, img, type, availableFrom, small_description } = houseData;
 
   return (
-    <div className="w-[450px] flex flex-grow text-left">
+    <div className="w-full lg:w-[380px] flex flex-grow text-left">
       <div className="card glass w-full grid items-center justify-center p-5">
-        <figure className="w-[400px] h-[200px] rounded-lg">
+        <figure className="w-[330px] h-[200px] rounded-lg">
           <img src={img} alt="House img!" />
         </figure>
         <div className="card-body grid gap-5">

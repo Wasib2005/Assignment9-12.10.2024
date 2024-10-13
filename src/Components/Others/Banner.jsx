@@ -13,11 +13,11 @@ const Banner = ({ banner, i,bannerDataLength }) => {
         <div className="absolute w-full h-full rounded-3xl m-auto bg-slate-400 opacity-40"></div>
         
         <div className="absolute top-[25%] left-[10%] z-10 grid gap-6 text-left justify-start">
-          <h1 className=" text-success text-3xl md:text-5xl lg:text-6xl font-bold w-[80%]">
+          <h1 className=" text-success text-2xl lg:text-6xl font-bold w-[80%]">
             Discover Your Perfect House: Affordable Options for All
           </h1>
           <div>
-            <button>
+            <button className="text-base">
               <a
                 href="#_"
                 className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-green-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group"
@@ -55,7 +55,7 @@ const Banner = ({ banner, i,bannerDataLength }) => {
                     ></path>
                   </svg>
                 </span>
-                <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
+                <span className=" relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
                   Explore More
                 </span>
               </a>
