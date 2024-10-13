@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import flowbite from "flowbite/plugin";
+
 import daisyui from "daisyui";
 import tailwindcssanimated from "tailwindcss-animated";
 export default {
@@ -26,7 +26,7 @@ export default {
     },
   },
 
-  plugins: [daisyui, flowbite, tailwindcssanimated],
+  plugins: [daisyui, tailwindcssanimated],
   daisyui: {
     themes: ["light", "dark",],
   },

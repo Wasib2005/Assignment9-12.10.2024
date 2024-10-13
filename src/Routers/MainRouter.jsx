@@ -9,7 +9,7 @@ export const MainRouter = createBrowserRouter([
     path: "/",
     element: <MainFrame />,
     children: [
-      { path: "/", element: <Home /> },
+      { path: "/", element: <Home />,loader:()=>fetch("data.json") },
       { path: "rentPlaces", element: <RentPlaces /> },
       { path: "comparison" },
     ],

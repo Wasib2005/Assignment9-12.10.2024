@@ -45,7 +45,7 @@ const Nav = () => {
             isActive ? " text-success border-2 border-success " : ""
           }
         >
-          Find Home
+          Find House
         </NavLink>
       </li>
       <li>
