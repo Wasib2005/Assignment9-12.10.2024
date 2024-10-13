@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
 import { getRandomItem } from "../../utilities/GetRandomItem";
 import HousesList from "./HousesList";
 
-const SomeHomes = () => {
-  const data = useLoaderData();
+const SomeHomes = ({ houseData }) => {
   const [someHouseData, setSomeHouseData] = useState([]);
   useEffect(() => {
-    setSomeHouseData(getRandomItem(data, 6));
-  }, [data]);
+    setSomeHouseData(getRandomItem(houseData, 6));
+  }, [houseData]);
   return (
     <div className="">
       <div className="text-center mt-20 lg:mt-44">

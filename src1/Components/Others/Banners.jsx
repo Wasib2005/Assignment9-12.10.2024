@@ -1,20 +1,14 @@
-
 import Banner from "./Banner";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getRandomItem } from "../../utilities/GetRandomItem";
-import { DataContext } from "../../Context/CommonContext";
 
-const Banners = () => {
-  const { HouseData } = useContext(DataContext);
+const Banners = ({ houseData }) => {
   const [bannerData, setBannerData] = useState([]);
 
   useEffect(() => {
-    if (HouseData.length === 0) {
-      return;
-    }
-    const tempBanners = getRandomItem(HouseData, 10);
+    const tempBanners = getRandomItem(houseData, 10);
     setBannerData(tempBanners);
-  }, [HouseData]);
+  }, [houseData]);
 
   return (
     <div className="flex items-center justify-center mt-12 lg:mt-28 ">
