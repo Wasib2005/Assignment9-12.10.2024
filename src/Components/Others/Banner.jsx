@@ -2,11 +2,17 @@ import PropTypes from "prop-types";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
 const Banner = ({ banner, i }) => {
+  console.log(typeof(banner))
+  if (banner.img === undefined){
+    return 
+  }
   return (
     <>
       <div id={`slide${i + 1}`} className="carousel-item relative w-full">
         <img src={banner.img} className="w-full" />
-        <div className="absolute w-[500px] h-[250px] md:w-[800px] md:h-[400px] lg:w-[1000px] lg:h-[600px] rounded-3xl m-auto bg-slate-400 opacity-40"></div>
+
+        <div className="absolute w-full h-full rounded-3xl m-auto bg-slate-400 opacity-40"></div>
+        
         <div className="absolute top-[25%] left-[10%] z-10 grid gap-6 text-left justify-start">
           <h1 className=" text-success text-3xl md:text-5xl lg:text-6xl font-bold w-[80%]">
             Discover Your Perfect House: Affordable Options for All
