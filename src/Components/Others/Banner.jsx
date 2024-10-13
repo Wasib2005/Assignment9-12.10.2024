@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
-const Banner = ({ banner, i }) => {
-  console.log(typeof(banner))
+const Banner = ({ banner, i,bannerDataLength }) => {
   if (banner.img === undefined){
     return 
   }
@@ -57,7 +56,7 @@ const Banner = ({ banner, i }) => {
                   </svg>
                 </span>
                 <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
-                  Explore
+                  Explore More
                 </span>
               </a>
             </button>
@@ -79,7 +78,7 @@ const Banner = ({ banner, i }) => {
             <a
               href={`#slide${i + 2}`}
               className={`btn btn-circle btn-ghost text-3xl  hover:bg-slate-500  ${
-                i === 4 ? "hidden" : ""
+                i === bannerDataLength-1 ? "hidden" : ""
               }`}
             >
               <FaArrowAltCircleRight />
@@ -94,6 +93,7 @@ const Banner = ({ banner, i }) => {
 Banner.propTypes = {
   banner: PropTypes.object,
   i: PropTypes.number,
+  bannerDataLength: PropTypes.number,
 };
 
 export default Banner;

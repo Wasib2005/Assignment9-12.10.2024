@@ -45,7 +45,7 @@ const Nav = () => {
             isActive ? " text-success border-2 border-success " : ""
           }
         >
-          Find House
+          Rent House
         </NavLink>
       </li>
       <li>
@@ -98,7 +98,7 @@ const Nav = () => {
                 <MdHomeWork />
                 <span className="text-blue-700">Rent</span>
                 <span className=" bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">
-                  Buy
+                  .com
                 </span>
               </button>
             </Link>

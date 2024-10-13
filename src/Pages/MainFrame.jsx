@@ -4,7 +4,7 @@ import Footer from "../Components/MainComponent/Footer";
 
 const MainFrame = () => {
   return (
-    <div className="min-w-[500px]">
+    <div className="min-w-[500px] text-center">
       <Nav />
       <div className=" m-auto lg:w-[1150px]">
         <div className="pt-[75px]  min-h-[calc(100vh-70px-155px)]">
