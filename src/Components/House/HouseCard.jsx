@@ -10,6 +10,7 @@ const HouseCard = ({ house }) => {
     type,
     availableFrom,
     location__address,
+    segment_name,
   } = house;
 
   return (
@@ -25,6 +26,7 @@ const HouseCard = ({ house }) => {
         <div className="card-body">
           <h2 className="card-title font-bold text-black">{`House No. ${id}`}</h2>
           <hr className="border-dashed" />
+          <h3 className="font-bold">{segment_name}</h3>
           <p>{small_description}</p>
           <hr className="border-dashed" />
           <p>
@@ -32,19 +34,17 @@ const HouseCard = ({ house }) => {
           </p>
           <hr className="border-dashed" />
           <p className="font-bold">
-            Total room:
-            {" "}
-            <span className="font-extrabold">{totalRooms}</span>
+            Total room: <span className="font-extrabold">{totalRooms}</span>
           </p>
           <p className="font-bold">
-            Available From:
-            {" "}
+            Available From:{" "}
             <span className="font-extrabold">{availableFrom}</span>
           </p>
           <p className="font-bold">
-            Location/Address:
-            {" "}
-            <span className="font-extrabold underline">{location__address}</span>
+            Location/Address:{" "}
+            <span className="font-extrabold underline">
+              {location__address}
+            </span>
           </p>
 
           <div className="card-actions ">

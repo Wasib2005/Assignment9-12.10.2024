@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Navigate, NavLink, Outlet } from "react-router-dom";
 
 const RentPlaces = () => {
   return (
@@ -12,7 +12,7 @@ const RentPlaces = () => {
             to={"/rentPlaces/all"}
             className={({ isActive }) =>
               isActive
-                ? "font-bold text-lg underline hover:bg-slate-600 underline-offset-8"
+                ? "font-bold text-lg underline hover:bg-slate-600 underline-offset-8 hover:disabled:checked:"
                 : "font-bold text-lg hover:underline hover:bg-slate-600 hover:underline-offset-8"
             }
           >
@@ -70,7 +70,7 @@ const RentPlaces = () => {
           </NavLink>
         </ul>
       </div>
-
+            <Navigate  to="all"/>
       <div>
         <Outlet />
       </div>

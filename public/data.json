@@ -17,9 +17,9 @@
     "buildDate": "2023-01-01",
     "rent": 10000,
     "availableFrom": "2024-10-15",
-    "small_description": "A spacious 3-bedroom house in a quiet neighborhood, perfect for families. It has all the modern amenities you need."
+    "segment_name": "Modern Family Home",
+    "bigDescription": "This spacious 3-bedroom house in a quiet neighborhood is perfect for families. It features modern amenities like electricity, gas, water, and internet, making it move-in ready. Enjoy the convenience of a central location while living in a peaceful area."
   },
-
   {
     "id": 2,
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2dyGddLCbQKOVXtfNJ_w54IUgAcKlsfdPkQ&s",
@@ -38,9 +38,9 @@
     "buildDate": "2022-05-15",
     "rent": 12000,
     "availableFrom": "2024-11-01",
-    "small_description": "A modern 4-bedroom house with a spacious backyard, ideal for families with children."
+    "segment_name": "Spacious Family Home with Backyard",
+    "bigDescription": "This modern 4-bedroom house with a spacious backyard is ideal for families with children. Enjoy all the amenities you need, including electricity, gas, water, and internet. The large backyard provides a perfect play area for kids."
   },
-
   {
     "id": 3,
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2dyGddLCbQKOVXtfNJ_w54IUgAcKlsfdPkQ&s",
@@ -59,9 +59,9 @@
     "buildDate": "2020-10-01",
     "rent": 8000,
     "availableFrom": "2024-12-01",
-    "small_description": "A cozy 3-bedroom house in a peaceful neighborhood, perfect for small families."
+    "segment_name": "Cozy Family Home in Peaceful Neighborhood",
+    "bigDescription": "This charming 3-bedroom house in a peaceful neighborhood is perfect for small families. This move-in ready home includes all essential utilities  like electricity, gas, water, and internet.  Enjoy the tranquility of the neighborhood while still being close to amenities."
   },
-
   {
     "id": 4,
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFZjomoIa-LL1xzX0eaRTE4WcviiQa5h5njw&s",
@@ -80,9 +80,9 @@
     "buildDate": "2021-03-15",
     "rent": 15000,
     "availableFrom": "2025-01-01",
-    "small_description": "A luxurious 5-bedroom house with a swimming pool and a large garden, suitable for large families."
+    "segment_name": "Luxurious Family Home with Pool and Garden",
+    "bigDescription": "This stunning 5-bedroom house boasts a swimming pool and a large garden, perfect for families who love to entertain. Enjoy all the modern amenities you need, including electricity, gas, water, and internet. This spacious property provides ample room for everyone to relax and unwind."
   },
-
   {
     "id": 5,
     "img": "https://www.propertyfinder.bh/property/eb347f4a02ce87d86b5343df59465524/416/272/MODE/2ac8fe/791495-dd4b2o.webp?ctr=bh",
@@ -101,9 +101,9 @@
     "buildDate": "2023-08-01",
     "rent": 11000,
     "availableFrom": "2024-12-15",
-    "small_description": "A spacious 4-bedroom house with a modern kitchen and a balcony, perfect for families who enjoy city living."
+    "segment_name": "Modern Family Home with City Views",
+    "bigDescription": "This spacious 4-bedroom house features a modern kitchen and a balcony, ideal for families who enjoy city living. All essential amenities are included, such as electricity, gas, water, and internet.  The balcony provides a perfect spot to relax and enjoy the city views."
   },
-
   {
     "id": 6,
     "img": "https://static.Student.com/storm-frontend-wp/uploads/2016/01/Bed-types_Single-bed-840x560.jpeg",
@@ -122,9 +122,9 @@
     "buildDate": "2023-01-01",
     "rent": 5000,
     "availableFrom": "2024-10-15",
-    "small_description": "A Single-room apartment near the university, perfect for students."
+    "segment_name": "Affordable Student Apartment",
+    "bigDescription": "This single-room apartment is perfect for students looking for affordable housing near the university. It features essential amenities like electricity, water, and internet, making it a convenient choice for students."
   },
-
   {
     "id": 7,
     "img": "https://assets1.keepeek.com/pm_11125_113_113857-gay85hiu08-whr.jpg",
@@ -143,9 +143,9 @@
     "buildDate": "2022-05-15",
     "rent": 7000,
     "availableFrom": "2024-11-01",
-    "small_description": "A 2-bedroom apartment with a shared kitchen and bathroom, ideal for students."
+    "segment_name": "Student Apartment with Shared Kitchen and Bathroom",
+    "bigDescription": "This 1-bedroom apartment features a shared kitchen and bathroom, making it an affordable option for students. It includes essential amenities like electricity, water, and internet."
   },
-
   {
     "id": 8,
     "img": "https://i.pinimg.com/originals/60/92/4d/60924d115f711ff65f68332b5ce17129.jpg",
@@ -164,9 +164,9 @@
     "buildDate": "2020-10-01",
     "rent": 4500,
     "availableFrom": "2024-12-01",
-    "small_description": "A small Single-room apartment with basic amenities, suitable for students on a budget."
+    "segment_name": "Basic Student Studio",
+    "bigDescription": "This small single-room apartment is a budget-friendly option for students. It features basic amenities like electricity, water, and internet."
   },
-
   {
     "id": 9,
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQixwBns1DGtNMgtFmSgxL4z4ga1qZoJhnzgg&s",
@@ -185,7 +185,8 @@
     "buildDate": "2021-03-15",
     "rent": 8000,
     "availableFrom": "2025-01-01",
-    "small_description": "A 2-bedroom apartment with a study room, perfect for students who need a quiet place to study."
+    "segment_name": "Student Apartment with Study Room",
+    "bigDescription": "This 1-bedroom apartment features a dedicated study room, perfect for students who need a quiet space to focus on their studies. It includes all essential amenities like electricity, water, and internet."
   },
 
   {
@@ -206,7 +207,8 @@
     "buildDate": "2023-08-01",
     "rent": 6000,
     "availableFrom": "2024-12-15",
-    "small_description": "A Single-room apartment with a balcony, ideal for students who enjoy outdoor space."
+    "segment_name": "Student Apartment with Balcony",
+    "big_description": "This single-room apartment features a balcony, perfect for students who enjoy spending time outdoors. It includes all essential amenities like electricity, water, and internet."
   },
 
   {
@@ -227,7 +229,8 @@
     "buildDate": "2023-01-02",
     "rent": 3000,
     "availableFrom": "2024-10-15",
-    "small_description": "A Single-room apartment near the industrial area, perfect for Single workers."
+    "segment_name": "Single Apartment near Industrial Area",
+    "big_description": "This single-room apartment is conveniently located near the industrial area, making it ideal for single workers. It features all essential amenities like electricity, gas, water, and internet, along with 500 square feet of living space."
   },
 
   {
@@ -248,9 +251,9 @@
     "buildDate": "2022-05-16",
     "rent": 2500,
     "availableFrom": "2024-11-01",
-    "small_description": "A small, affordable Single-room apartment for Single workers."
+    "segment_name": "Affordable Single Apartment",
+    "big_description": "This small, affordable single-room apartment is a budget-friendly option for single workers. It includes all essential amenities like electricity, gas, water, and internet, with 400 square feet of living space."
   },
-
   {
     "id": 13,
     "img": "https://i.pinimg.com/originals/bf/d2/69/bfd2696e886bba13cd9154bd99e6e13b.jpg",
@@ -269,9 +272,10 @@
     "buildDate": "2020-10-02",
     "rent": 2000,
     "availableFrom": "2024-12-01",
-    "small_description": "A basic Single-room apartment with shared facilities, suitable for Single workers on a budget."
+    "small_description": "A basic Single-room apartment with shared facilities, suitable for Single workers on a budget.",
+    "big_description": "This cozy single-room apartment offers a budget-friendly option for working professionals. Enjoy the convenience of shared amenities while keeping costs low.",
+    "segment_name": "Budget-Friendly"
   },
-
   {
     "id": 14,
     "img": "https://www.shutterstock.com/image-illustration/3d-floor-plan-rendering-one-260nw-2494255191.jpg",
@@ -290,9 +294,10 @@
     "buildDate": "2021-03-16",
     "rent": 3500,
     "availableFrom": "2025-01-01",
-    "small_description": "A Single-room apartment with shared kitchen and bathroom, ideal for Single workers."
+    "small_description": "A Single-room apartment with shared kitchen and bathroom, ideal for Single workers.",
+    "big_description": "This single-room apartment provides a comfortable living space with a shared kitchen and bathroom. Ideal for single occupants seeking an affordable option.",
+    "segment_name": "Convenient Living"
   },
-
   {
     "id": 15,
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVQJoqjxRDXtka-01WCZ8K6gWf7kj142DiQg&s",
@@ -311,9 +316,10 @@
     "buildDate": "2023-08-02",
     "rent": 4000,
     "availableFrom": "2024-12-15",
-    "small_description": "A Single-room apartment with a balcony, perfect for Single workers who enjoy outdoor space."
+    "small_description": "A Single-room apartment with a balcony, perfect for Single workers who enjoy outdoor space.",
+    "big_description": "Unwind on your private balcony in this spacious single-room apartment. Perfect for single renters who appreciate some outdoor space.",
+    "segment_name": "Relaxing Retreat"
   },
-
   {
     "id": 16,
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCyNTENdSAinqV8Rdm8FzfZisRL5BSakEKdg&s",
@@ -332,9 +338,10 @@
     "buildDate": "2023-01-02",
     "rent": 5000,
     "availableFrom": "2024-10-15",
-    "small_description": "A cozy 2-bedroom apartment with a private balcony, perfect for couples."
+    "small_description": "A cozy 2-bedroom apartment with a private balcony, perfect for couples.",
+    "big_description": "Enjoy a romantic getaway in this cozy 2-bedroom apartment with a private balcony. Ideal for couples seeking a comfortable and intimate space.",
+    "segment_name": "Romantic Retreat"
   },
-
   {
     "id": 17,
     "img": "https://i.pinimg.com/736x/e3/5c/10/e35c1041081b2f2536b1cb1a77fced2f.jpg",
@@ -353,9 +360,10 @@
     "buildDate": "2022-05-16",
     "rent": 4500,
     "availableFrom": "2024-11-01",
-    "small_description": "A modern 2-bedroom apartment with a fully equipped kitchen, ideal for couples."
+    "small_description": "A modern 2-bedroom apartment with a fully equipped kitchen, ideal for couples.",
+    "big_description": "Experience modern living in this 2-bedroom apartment featuring a fully equipped kitchen. Perfect for couples who value convenience and style.",
+    "segment_name": "Modern Living"
   },
-
   {
     "id": 18,
     "img": "https://cozy-Couple-friendly-private-room.dhaka-hotel.com/data/Photos/OriginalPhoto/14786/1478608/1478608510/dhaka-photo-4.JPEG",
@@ -374,9 +382,10 @@
     "buildDate": "2020-10-02",
     "rent": 4000,
     "availableFrom": "2024-12-01",
-    "small_description": "A comfortable 2-bedroom apartment with a spacious living room, suitable for couples."
+    "small_description": "A comfortable 2-bedroom apartment with a spacious living room, suitable for couples.",
+    "big_description": "This spacious 2-bedroom apartment offers a comfortable living space for couples. Enjoy the convenience of a spacious living room.",
+    "segment_name": "Spacious Living"
   },
-  
   {
     "id": 19,
     "img": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/563796855.jpg?k=e93f63444558350bfd831c496ae53565e38d682e0e6307b636cdaf85022a4f92&o=&hp=1",
@@ -395,9 +404,10 @@
     "buildDate": "2021-03-16",
     "rent": 5500,
     "availableFrom": "2025-01-01",
-    "small_description": "A stylish 2-bedroom apartment with a private balcony and a view, perfect for couples."
+    "small_description": "A stylish 2-bedroom apartment with a private balcony and a view, perfect for couples.",
+    "big_description": "Indulge in luxury with this stylish 2-bedroom apartment featuring a private balcony and stunning views. Perfect for couples seeking a sophisticated lifestyle.",
+    "segment_name": "Luxury Living"
   },
-
   {
     "id": 20,
     "img": "https://imagedelivery.net/ePR8PyKf84wPHx7_RYmEag/c121ca51-eae9-4979-d855-99afe4e7fc00/86",
@@ -416,9 +426,10 @@
     "buildDate": "2023-08-02",
     "rent": 4800,
     "availableFrom": "2024-12-15",
-    "small_description": "A cozy 2-bedroom apartment with a modern kitchen and dining area, ideal for couples."
+    "small_description": "A cozy 2-bedroom apartment with a modern kitchen and dining area, ideal for couples.",
+    "big_description": "Enjoy a modern and comfortable living experience in this 2-bedroom apartment featuring a well-equipped kitchen and dining area. Perfect for couples who love to cook and entertain.",
+    "segment_name": "Modern Comfort"
   },
-
   {
     "id": 21,
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRycGUujCmjb5c5BYbWpwVP3QmzhIOA34fhg&s",
@@ -437,9 +448,10 @@
     "buildDate": "2023-01-03",
     "rent": 3000,
     "availableFrom": "2024-10-15",
-    "small_description": "A Single-room apartment with accessible features, perfect for senior citizens."
+    "small_description": "A Single-room apartment with accessible features, perfect for senior citizens.",
+    "big_description": "This single-room apartment is designed with accessibility in mind, making it ideal for senior citizens. Enjoy the convenience of features that promote independent living.",
+    "segment_name": "Accessible Living"
   },
-
   {
     "id": 22,
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl3yC3c61tyWO31vioXKEEuCRPe6NixJFi1A&s",
@@ -458,9 +470,10 @@
     "buildDate": "2022-05-17",
     "rent": 2500,
     "availableFrom": "2024-11-01",
-    "small_description": "A small, affordable Single-room apartment with wheelchair accessibility, suitable for senior citizens."
+    "small_description": "A small, affordable Single-room apartment with wheelchair accessibility, suitable for senior citizens.",
+    "big_description": "This affordable single-room apartment is designed for wheelchair accessibility, providing a comfortable and convenient living space for senior citizens. Enjoy the benefits of independent living at an affordable price.",
+    "segment_name": "Affordable Living"
   },
-
   {
     "id": 23,
     "img": "https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2023/03/14/66b66170-f5db-4961-acb7-910f15e61ace_344d0894.jpg?itok=meygwxin&v=1678797888",
@@ -479,9 +492,10 @@
     "buildDate": "2020-10-03",
     "rent": 2000,
     "availableFrom": "2024-12-01",
-    "small_description": "A basic Single-room apartment with grab bars and non-slip flooring, ideal for senior citizens."
+    "small_description": "A basic Single-room apartment with grab bars and non-slip flooring, ideal for senior citizens.",
+    "big_description": "Ensure a safe and comfortable living experience in this single-room apartment featuring grab bars and non-slip flooring. Ideal for senior citizens seeking an independent lifestyle with added safety features.",
+    "segment_name": "Independent Senior Living"
   },
-
   {
     "id": 24,
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhw_Q-TrpLIBR39MwKYcfODlKKN0lPubH7yg&s",
@@ -500,11 +514,12 @@
     "buildDate": "2021-03-17",
     "rent": 3500,
     "availableFrom": "2025-01-01",
-    "small_description": "A Single-room apartment with a quiet neighborhood and easy access to medical facilities, suitable for senior citizens."
+    "small_description": "A Single-room apartment with a quiet neighborhood and easy access to medical facilities, suitable for senior citizens.",
+    "big_description": "Enjoy a peaceful and convenient living environment in this single-room apartment situated in a quiet neighborhood with easy access to medical facilities. Ideal for senior citizens who prioritize tranquility and healthcare proximity.",
+    "segment_name": "Peaceful Senior Living"
   },
-  
   {
-    "id": 2,
+    "id": 25,
     "img": "https://miro.medium.com/v2/resize:fit:1400/0*C7GKRuSbp4jEjHEo",
     "totalRooms": 1,
     "type": "Senior Citizen",
@@ -521,6 +536,30 @@
     "buildDate": "2023-08-03",
     "rent": 4000,
     "availableFrom": "2024-12-15",
-    "small_description": "A Single-room apartment with a balcony and a view, perfect for senior citizens who enjoy outdoor space."
+    "small_description": "A Single-room apartment with a balcony and a view, perfect for senior citizens who enjoy outdoor space.",
+    "big_description": "Enjoy breathtaking views from the balcony of this single-room apartment. Ideal for senior citizens who appreciate outdoor living and enjoy the beauty of the surroundings.",
+    "segment_name": "Outdoor Living"
+  },
+  {
+    "id": 26,
+    "img": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/563796855.jpg?k=e93f63444558350bfd831c496ae53565e38d682e0e6307b636cdaf85022a4f92&o=&hp=1",
+    "totalRooms": 2,
+    "type": "Couple",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "squareFootage": 750,
+    "services__electricity": "TRUE",
+    "services__gas": "TRUE",
+    "services__water": "TRUE",
+    "services__internet": "TRUE",
+    "location__address": "1011 Maple Street, Sutiakathi Union, Barisal Division, Bangladesh",
+    "location__latitude": 22.591,
+    "location__longitude": 90.359,
+    "buildDate": "2021-03-16",
+    "rent": 5500,
+    "availableFrom": "2025-01-01",
+    "small_description": "A stylish 2-bedroom apartment with a private balcony and a view, perfect for couples.",
+    "big_description": "Indulge in luxury with this stylish 2-bedroom apartment featuring a private balcony and stunning views. Perfect for couples seeking a sophisticated lifestyle.",
+    "segment_name": "Luxury Living"
   }
 ]

@@ -47,16 +47,9 @@ const Nav = () => {
         >
           Find House
         </NavLink>
-        <NavLink
-          to={"/rentPlaces"}
-          className={({ isActive }) =>
-            isActive ? " text-success border-2 border-success " : ""
-          }
-        >
-          Find House
-        </NavLink>
       </li>
       <li>
+        
         <NavLink
           to={"/comparison"}
           className={({ isActive }) =>
