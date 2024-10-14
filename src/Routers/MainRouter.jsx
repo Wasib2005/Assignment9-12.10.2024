@@ -3,8 +3,7 @@ import MainFrame from "../Pages/MainFrame";
 import Home from "../Pages/Home";
 import RentPlaces from "../Pages/RentPlaces";
 import UserLog from "../Pages/UserLog";
-import RentPlacesAll from "../Components/Others/RentPlacesComponent/RentPlacesAll";
-import RentPlacesFamily from "../Components/Others/RentPlacesComponent/RentPlacesFamily copy";
+import RentPlacesList from "../Components/Others/RentPlacesComponent/RentPlacesList";
 
 export const MainRouter = createBrowserRouter([
   {
@@ -21,17 +20,13 @@ export const MainRouter = createBrowserRouter([
         element: <RentPlaces />,
         children: [
           {
-            path: "all",
-            element: <RentPlacesAll />,
-            loader: () => fetch("/public/data.json"),
-          },
-          {
-            path: "family",
-            element: <RentPlacesFamily />,
+            path: ":typeId",
+            element: <RentPlacesList />,
             loader: () => fetch("/public/data.json"),
           },
         ],
       },
+      {path:"PlacesProperties/:houseId"},
       { path: "comparison" },
     ],
   },

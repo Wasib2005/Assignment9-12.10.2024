@@ -50,7 +50,7 @@ const HouseCard = ({ house }) => {
           <div className="card-actions ">
             <button>
               <NavLink
-                to={`/rentPlaces/${id}`}
+                to={`/PlacesProperties/${id}`}
                 className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md"
               >
                 <span className="w-full h-full bg-gradient-to-br from-[#9fff05] via-[#54ffa1] to-[#00eeff] group-hover:from-[#00ff2a] group-hover:via-[#68ff54] group-hover:to-[#05e2ff] absolute" />

@@ -106,7 +106,7 @@
 
   {
     "id": 6,
-    "img": "https://static.Student.com/storm-frontend-wp/uploads/2016/01/Bed-types_single-bed-840x560.jpeg",
+    "img": "https://static.Student.com/storm-frontend-wp/uploads/2016/01/Bed-types_Single-bed-840x560.jpeg",
     "totalRooms": 1,
     "type": "Student",
     "bedrooms": 1,
@@ -122,7 +122,7 @@
     "buildDate": "2023-01-01",
     "rent": 5000,
     "availableFrom": "2024-10-15",
-    "small_description": "A single-room apartment near the university, perfect for students."
+    "small_description": "A Single-room apartment near the university, perfect for students."
   },
 
   {
@@ -164,7 +164,7 @@
     "buildDate": "2020-10-01",
     "rent": 4500,
     "availableFrom": "2024-12-01",
-    "small_description": "A small single-room apartment with basic amenities, suitable for students on a budget."
+    "small_description": "A small Single-room apartment with basic amenities, suitable for students on a budget."
   },
 
   {
@@ -206,14 +206,14 @@
     "buildDate": "2023-08-01",
     "rent": 6000,
     "availableFrom": "2024-12-15",
-    "small_description": "A single-room apartment with a balcony, ideal for students who enjoy outdoor space."
+    "small_description": "A Single-room apartment with a balcony, ideal for students who enjoy outdoor space."
   },
 
   {
     "id": 11,
     "img": "https://www.home-designing.com/wp-content/uploads/2014/06/Colorful-1-bedroom-apartment.jpg",
     "totalRooms": 1,
-    "type": "single",
+    "type": "Single",
     "bedrooms": 1,
     "bathrooms": 1,
     "squareFootage": 500,
@@ -227,14 +227,14 @@
     "buildDate": "2023-01-02",
     "rent": 3000,
     "availableFrom": "2024-10-15",
-    "small_description": "A single-room apartment near the industrial area, perfect for single workers."
+    "small_description": "A Single-room apartment near the industrial area, perfect for Single workers."
   },
 
   {
     "id": 12,
     "img": "https://i.pinimg.com/originals/4a/6b/9d/4a6b9d04f80c97fc02c84c4336c1559a.jpg",
     "totalRooms": 1,
-    "type": "single",
+    "type": "Single",
     "bedrooms": 1,
     "bathrooms": 1,
     "squareFootage": 400,
@@ -248,14 +248,14 @@
     "buildDate": "2022-05-16",
     "rent": 2500,
     "availableFrom": "2024-11-01",
-    "small_description": "A small, affordable single-room apartment for single workers."
+    "small_description": "A small, affordable Single-room apartment for Single workers."
   },
 
   {
     "id": 13,
     "img": "https://i.pinimg.com/originals/bf/d2/69/bfd2696e886bba13cd9154bd99e6e13b.jpg",
     "totalRooms": 1,
-    "type": "single",
+    "type": "Single",
     "bedrooms": 1,
     "bathrooms": 1,
     "squareFootage": 350,
@@ -269,14 +269,14 @@
     "buildDate": "2020-10-02",
     "rent": 2000,
     "availableFrom": "2024-12-01",
-    "small_description": "A basic single-room apartment with shared facilities, suitable for single workers on a budget."
+    "small_description": "A basic Single-room apartment with shared facilities, suitable for Single workers on a budget."
   },
 
   {
     "id": 14,
     "img": "https://www.shutterstock.com/image-illustration/3d-floor-plan-rendering-one-260nw-2494255191.jpg",
     "totalRooms": 1,
-    "type": "single",
+    "type": "Single",
     "bedrooms": 1,
     "bathrooms": 1,
     "squareFootage": 450,
@@ -290,14 +290,14 @@
     "buildDate": "2021-03-16",
     "rent": 3500,
     "availableFrom": "2025-01-01",
-    "small_description": "A single-room apartment with shared kitchen and bathroom, ideal for single workers."
+    "small_description": "A Single-room apartment with shared kitchen and bathroom, ideal for Single workers."
   },
 
   {
     "id": 15,
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVQJoqjxRDXtka-01WCZ8K6gWf7kj142DiQg&s",
     "totalRooms": 1,
-    "type": "single",
+    "type": "Single",
     "bedrooms": 1,
     "bathrooms": 1,
     "squareFootage": 550,
@@ -311,7 +311,7 @@
     "buildDate": "2023-08-02",
     "rent": 4000,
     "availableFrom": "2024-12-15",
-    "small_description": "A single-room apartment with a balcony, perfect for single workers who enjoy outdoor space."
+    "small_description": "A Single-room apartment with a balcony, perfect for Single workers who enjoy outdoor space."
   },
 
   {
@@ -437,7 +437,7 @@
     "buildDate": "2023-01-03",
     "rent": 3000,
     "availableFrom": "2024-10-15",
-    "small_description": "A single-room apartment with accessible features, perfect for senior citizens."
+    "small_description": "A Single-room apartment with accessible features, perfect for senior citizens."
   },
 
   {
@@ -458,7 +458,7 @@
     "buildDate": "2022-05-17",
     "rent": 2500,
     "availableFrom": "2024-11-01",
-    "small_description": "A small, affordable single-room apartment with wheelchair accessibility, suitable for senior citizens."
+    "small_description": "A small, affordable Single-room apartment with wheelchair accessibility, suitable for senior citizens."
   },
 
   {
@@ -479,7 +479,7 @@
     "buildDate": "2020-10-03",
     "rent": 2000,
     "availableFrom": "2024-12-01",
-    "small_description": "A basic single-room apartment with grab bars and non-slip flooring, ideal for senior citizens."
+    "small_description": "A basic Single-room apartment with grab bars and non-slip flooring, ideal for senior citizens."
   },
 
   {
@@ -500,7 +500,7 @@
     "buildDate": "2021-03-17",
     "rent": 3500,
     "availableFrom": "2025-01-01",
-    "small_description": "A single-room apartment with a quiet neighborhood and easy access to medical facilities, suitable for senior citizens."
+    "small_description": "A Single-room apartment with a quiet neighborhood and easy access to medical facilities, suitable for senior citizens."
   },
   
   {
@@ -521,6 +521,6 @@
     "buildDate": "2023-08-03",
     "rent": 4000,
     "availableFrom": "2024-12-15",
-    "small_description": "A single-room apartment with a balcony and a view, perfect for senior citizens who enjoy outdoor space."
+    "small_description": "A Single-room apartment with a balcony and a view, perfect for senior citizens who enjoy outdoor space."
   }
 ]

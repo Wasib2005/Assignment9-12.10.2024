@@ -2,14 +2,14 @@ import { NavLink, Outlet } from "react-router-dom";
 
 const RentPlaces = () => {
   return (
-    <div className="mt-[100px]">
+    <div className="mt-[100px] text-center">
       <h1 className="text-4xl lg:text-6xl font-bold">
         Our best selection Houses
       </h1>
       <div className="mt-[100px]">
         <ul className=" justify-between flex gap-2">
           <NavLink
-            to={"all"}
+            to={"/rentPlaces/all"}
             className={({ isActive }) =>
               isActive
                 ? "font-bold text-lg underline hover:bg-slate-600 underline-offset-8"
@@ -19,7 +19,7 @@ const RentPlaces = () => {
             All
           </NavLink>
           <NavLink
-            to={"family"}
+            to={"/rentPlaces/family"}
             className={({ isActive }) =>
               isActive
                 ? "font-bold text-lg underline hover:bg-slate-600 underline-offset-8"
@@ -29,7 +29,7 @@ const RentPlaces = () => {
             Family
           </NavLink>
           <NavLink
-            to={"student"}
+            to={"/rentPlaces/student"}
             className={({ isActive }) =>
               isActive
                 ? "font-bold text-lg underline hover:bg-slate-600 underline-offset-8"
@@ -39,7 +39,7 @@ const RentPlaces = () => {
             Student
           </NavLink>
           <NavLink
-            to={"single"}
+            to={"/rentPlaces/single"}
             className={({ isActive }) =>
               isActive
                 ? "font-bold text-lg underline hover:bg-slate-600 underline-offset-8"
@@ -49,7 +49,7 @@ const RentPlaces = () => {
             Single
           </NavLink>
           <NavLink
-            to={"couple"}
+            to={"/rentPlaces/couple"}
             className={({ isActive }) =>
               isActive
                 ? "font-bold text-lg underline hover:bg-slate-600 underline-offset-8"
@@ -59,7 +59,7 @@ const RentPlaces = () => {
             Couple
           </NavLink>
           <NavLink
-            to={"SeniorCitizen"}
+            to={"/rentPlaces/SeniorCitizen"}
             className={({ isActive }) =>
               isActive
                 ? "font-bold text-lg underline hover:bg-slate-600 underline-offset-8"
@@ -70,6 +70,7 @@ const RentPlaces = () => {
           </NavLink>
         </ul>
       </div>
+
       <div>
         <Outlet />
       </div>
