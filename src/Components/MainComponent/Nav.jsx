@@ -40,7 +40,7 @@ const Nav = () => {
       </li>
       <li>
         <NavLink
-          to={"/rentPlaces"}
+          to={"/rentPlaces/all"}
           className={({ isActive }) =>
             isActive ? " text-success border-2 border-success " : ""
           }

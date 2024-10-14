@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+
 import PropTypes from "prop-types";
 import Banner from "./Banner";
 import { useEffect, useState } from "react";
