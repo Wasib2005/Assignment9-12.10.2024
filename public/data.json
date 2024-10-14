@@ -18,7 +18,8 @@
     "rent": 10000,
     "availableFrom": "2024-10-15",
     "segment_name": "Modern Family Home",
-    "bigDescription": "This spacious 3-bedroom house in a quiet neighborhood is perfect for families. It features modern amenities like electricity, gas, water, and internet, making it move-in ready. Enjoy the convenience of a central location while living in a peaceful area."
+    "big_description": "This spacious 3-bedroom house in a quiet neighborhood is perfect for families. It features modern amenities like electricity, gas, water, and internet, making it move-in ready. Enjoy the convenience of a central location while living in a peaceful area.",
+    "small_description": "3-bedroom family home with modern amenities in a quiet neighborhood."
   },
   {
     "id": 2,
@@ -39,7 +40,8 @@
     "rent": 12000,
     "availableFrom": "2024-11-01",
     "segment_name": "Spacious Family Home with Backyard",
-    "bigDescription": "This modern 4-bedroom house with a spacious backyard is ideal for families with children. Enjoy all the amenities you need, including electricity, gas, water, and internet. The large backyard provides a perfect play area for kids."
+    "big_description": "This modern 4-bedroom house with a spacious backyard is ideal for families with children. Enjoy all the amenities you need, including electricity, gas, water, and internet. The large backyard provides a perfect play area for kids.",
+    "small_description": "4-bedroom family home with backyard in a modern style."
   },
   {
     "id": 3,
@@ -60,7 +62,8 @@
     "rent": 8000,
     "availableFrom": "2024-12-01",
     "segment_name": "Cozy Family Home in Peaceful Neighborhood",
-    "bigDescription": "This charming 3-bedroom house in a peaceful neighborhood is perfect for small families. This move-in ready home includes all essential utilities  like electricity, gas, water, and internet.  Enjoy the tranquility of the neighborhood while still being close to amenities."
+    "big_description": "This charming 3-bedroom house in a peaceful neighborhood is perfect for small families. This move-in ready home includes all essential utilities like electricity, gas, water, and internet. Enjoy the tranquility of the neighborhood while still being close to amenities.",
+    "small_description": "3-bedroom family home in a peaceful neighborhood with essential utilities."
   },
   {
     "id": 4,
@@ -81,7 +84,8 @@
     "rent": 15000,
     "availableFrom": "2025-01-01",
     "segment_name": "Luxurious Family Home with Pool and Garden",
-    "bigDescription": "This stunning 5-bedroom house boasts a swimming pool and a large garden, perfect for families who love to entertain. Enjoy all the modern amenities you need, including electricity, gas, water, and internet. This spacious property provides ample room for everyone to relax and unwind."
+    "big_description": "This stunning 5-bedroom house boasts a swimming pool and a large garden, perfect for families who love to entertain. Enjoy all the modern amenities you need, including electricity, gas, water, and internet. This spacious property provides ample room for everyone to relax and unwind.",
+    "small_description": "Perfect for family gatherings with a pool and garden."
   },
   {
     "id": 5,
@@ -102,7 +106,8 @@
     "rent": 11000,
     "availableFrom": "2024-12-15",
     "segment_name": "Modern Family Home with City Views",
-    "bigDescription": "This spacious 4-bedroom house features a modern kitchen and a balcony, ideal for families who enjoy city living. All essential amenities are included, such as electricity, gas, water, and internet.  The balcony provides a perfect spot to relax and enjoy the city views."
+    "big_description": "This spacious 4-bedroom house features a modern kitchen and a balcony, ideal for families who enjoy city living. All essential amenities are included, such as electricity, gas, water, and internet.  The balcony provides a perfect spot to relax and enjoy the city views.",
+    "small_description": "Modern living with a balcony and city views."
   },
   {
     "id": 6,
@@ -123,7 +128,8 @@
     "rent": 5000,
     "availableFrom": "2024-10-15",
     "segment_name": "Affordable Student Apartment",
-    "bigDescription": "This single-room apartment is perfect for students looking for affordable housing near the university. It features essential amenities like electricity, water, and internet, making it a convenient choice for students."
+    "big_description": "This single-room apartment is perfect for students looking for affordable housing near the university. It features essential amenities like electricity, water, and internet, making it a convenient choice for students.",
+    "small_description": "Affordable student housing with essential amenities."
   },
   {
     "id": 7,
@@ -144,7 +150,8 @@
     "rent": 7000,
     "availableFrom": "2024-11-01",
     "segment_name": "Student Apartment with Shared Kitchen and Bathroom",
-    "bigDescription": "This 1-bedroom apartment features a shared kitchen and bathroom, making it an affordable option for students. It includes essential amenities like electricity, water, and internet."
+    "big_description": "This 1-bedroom apartment features a shared kitchen and bathroom, making it an affordable option for students. It includes essential amenities like electricity, water, and internet.",
+    "small_description": "1BR student apartment with shared amenities (kitchen & bath). Available Nov 1st."
   },
   {
     "id": 8,
@@ -165,7 +172,8 @@
     "rent": 4500,
     "availableFrom": "2024-12-01",
     "segment_name": "Basic Student Studio",
-    "bigDescription": "This small single-room apartment is a budget-friendly option for students. It features basic amenities like electricity, water, and internet."
+    "big_description": "This small single-room apartment is a budget-friendly option for students. It features basic amenities like electricity, water, and internet.",
+    "small_description": "Budget-friendly student studio. Available Dec 1st."
   },
   {
     "id": 9,
@@ -186,7 +194,8 @@
     "rent": 8000,
     "availableFrom": "2025-01-01",
     "segment_name": "Student Apartment with Study Room",
-    "bigDescription": "This 1-bedroom apartment features a dedicated study room, perfect for students who need a quiet space to focus on their studies. It includes all essential amenities like electricity, water, and internet."
+    "big_description": "This 1-bedroom apartment features a dedicated study room, perfect for students who need a quiet space to focus on their studies. It includes all essential amenities like electricity, water, and internet.",
+    "small_description": "1BR student apt w/ dedicated study room (available Jan 1, 2025)"
   },
 
   {
@@ -208,7 +217,8 @@
     "rent": 6000,
     "availableFrom": "2024-12-15",
     "segment_name": "Student Apartment with Balcony",
-    "big_description": "This single-room apartment features a balcony, perfect for students who enjoy spending time outdoors. It includes all essential amenities like electricity, water, and internet."
+    "big_description": "This single-room apartment features a balcony, perfect for students who enjoy spending time outdoors. It includes all essential amenities like electricity, water, and internet.",
+    "small_description": "1BR student apt with balcony (available Dec 15, 2024)"
   },
 
   {
@@ -230,7 +240,8 @@
     "rent": 3000,
     "availableFrom": "2024-10-15",
     "segment_name": "Single Apartment near Industrial Area",
-    "big_description": "This single-room apartment is conveniently located near the industrial area, making it ideal for single workers. It features all essential amenities like electricity, gas, water, and internet, along with 500 square feet of living space."
+    "big_description": "This single-room apartment is conveniently located near the industrial area, making it ideal for single workers. It features all essential amenities like electricity, gas, water, and internet, along with 500 square feet of living space.",
+    "small_description": "Spacious 1-bedroom with all amenities"
   },
 
   {
@@ -252,7 +263,8 @@
     "rent": 2500,
     "availableFrom": "2024-11-01",
     "segment_name": "Affordable Single Apartment",
-    "big_description": "This small, affordable single-room apartment is a budget-friendly option for single workers. It includes all essential amenities like electricity, gas, water, and internet, with 400 square feet of living space."
+    "big_description": "This small, affordable single-room apartment is a budget-friendly option for single workers. It includes all essential amenities like electricity, gas, water, and internet, with 400 square feet of living space.",
+    "small_description": "Cozy & Affordable Single Apartment"
   },
   {
     "id": 13,

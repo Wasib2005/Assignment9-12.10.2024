@@ -11,6 +11,7 @@ const HouseCard = ({ house }) => {
     availableFrom,
     location__address,
     segment_name,
+    rent,
   } = house;
 
   return (
@@ -33,20 +34,27 @@ const HouseCard = ({ house }) => {
             In a word idle for <span className="font-bold">{type}</span>
           </p>
           <hr className="border-dashed" />
-          <p className="font-bold">
-            Total room: <span className="font-extrabold">{totalRooms}</span>
+
+          <p className="font-bold flex justify-between">
+            <span>Total room:</span>
+            <span className="font-extrabold">{totalRooms}</span>
           </p>
-          <p className="font-bold">
-            Available From:{" "}
+          <p className="font-bold flex justify-between">
+            <span>Rent:</span>
+            <span className="font-extrabold">{rent}</span>
+          </p>
+          <p className="font-bold flex justify-between">
+            <span>Available From: </span>
             <span className="font-extrabold">{availableFrom}</span>
           </p>
+          <hr className="border-dashed" />
           <p className="font-bold">
             Location/Address:{" "}
             <span className="font-extrabold underline">
               {location__address}
             </span>
           </p>
-
+          <hr className="border-dashed" />
           <div className="card-actions ">
             <button>
               <NavLink
