@@ -4,18 +4,13 @@ import Home from "../Pages/Home";
 import RentPlaces from "../Pages/RentPlaces";
 import UserLog from "../Pages/UserLog";
 import RentPlacesAll from "../Components/Others/RentPlacesComponent/RentPlacesAll";
-import RentPlacesFamily from "../Components/Others/RentPlacesComponent/RentPlacesFamily copy";
 
 export const MainRouter = createBrowserRouter([
   {
     path: "/",
     element: <MainFrame />,
     children: [
-      {
-        path: "/",
-        element: <Home />,
-        loader: () => fetch("/public/data.json"),
-      },
+      { path: "/", element: <Home />, loader: () => fetch("/public/data.json") },
       {
         path: "rentPlaces",
         element: <RentPlaces />,
@@ -23,11 +18,6 @@ export const MainRouter = createBrowserRouter([
           {
             path: "all",
             element: <RentPlacesAll />,
-            loader: () => fetch("/public/data.json"),
-          },
-          {
-            path: "family",
-            element: <RentPlacesFamily />,
             loader: () => fetch("/public/data.json"),
           },
         ],
