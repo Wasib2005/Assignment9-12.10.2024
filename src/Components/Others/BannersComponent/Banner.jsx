@@ -12,7 +12,7 @@ const Banner = ({ banner, i }) => {
 
         <div className="absolute w-full h-full rounded-3xl m-auto bg-slate-400 opacity-40"></div>
 
-        <div className="absolute top-[25%] left-[10%] z-10 grid gap-6 text-left justify-start">
+        <div className="absolute top-[15%] md:top-[25%] left-[10%] z-10 grid gap-6 text-left justify-start">
           <h1 className=" text-success text-3xl md:text-5xl lg:text-6xl font-bold w-[80%]">
             Discover Your Perfect House: Affordable Options for All
           </h1>
@@ -56,7 +56,7 @@ const Banner = ({ banner, i }) => {
                   </svg>
                 </span>
                 <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
-                  Explore
+                  Explore More
                 </span>
               </a>
             </button>

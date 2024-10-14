@@ -1,13 +1,16 @@
 import PropTypes from "prop-types";
 
-const HouseCard = ({ House }) => {
+const HouseCard = ({ house }) => {
+  const {img}=house
+
   return (
-    <div>
-      <div className="card glass w-96">
+    <div className="">
+      <div className="card glass w-full md:w-96 p-5">
         <figure>
           <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="car!"
+            src={img}
+            alt="House img!!!"
+            className="w-full h-[200px] rounded-2xl"
           />
         </figure>
         <div className="card-body">
@@ -22,6 +25,6 @@ const HouseCard = ({ House }) => {
   );
 };
 
-HouseCard.propTypes = { House: PropTypes.obj };
+HouseCard.propTypes = { house: PropTypes.object };
 
 export default HouseCard;
