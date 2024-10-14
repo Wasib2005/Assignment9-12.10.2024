@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const HouseCard = (props) => {
+const HouseCard = ({ House }) => {
   return (
     <div>
       <div className="card glass w-96">
@@ -22,6 +22,6 @@ const HouseCard = (props) => {
   );
 };
 
-HouseCard.propTypes = {};
+HouseCard.propTypes = { House: PropTypes.obj };
 
 export default HouseCard;
