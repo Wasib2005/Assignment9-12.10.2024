@@ -5,6 +5,8 @@ import RentPlaces from "../Pages/RentPlaces";
 import UserLog from "../Pages/UserLog";
 import RentPlacesList from "../Components/Others/RentPlacesComponent/RentPlacesList";
 import HouseProperties from "../Pages/HouseProperties";
+import { element } from "prop-types";
+import HouseComparison from "../Pages/HouseComparison";
 
 export const MainRouter = createBrowserRouter([
   {
@@ -32,7 +34,11 @@ export const MainRouter = createBrowserRouter([
         element: <HouseProperties />,
         loader: () => fetch("/public/data.json"),
       },
-      { path: "comparison" },
+      {
+        path: "comparison",
+        element: <HouseComparison />,
+        loader: () => fetch("/public/data.json"),
+      },
     ],
   },
   {

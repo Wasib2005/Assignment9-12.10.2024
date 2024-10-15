@@ -20,7 +20,9 @@ const HouseProperties = () => {
     if (compareList.includes(houseData.id)) {
       setCompareList(compareList.filter((item) => item !== houseData.id));
       toast.error(` House No. ${id} has been removed from Compare List`)
-    } else {
+    }
+    
+    else {
       toast.success(` House No. ${id} has been added from Compare List`)
       setCompareList([...compareList, houseData.id]);
     }
@@ -31,7 +33,7 @@ const HouseProperties = () => {
       saveToLS("compareList", compareList);
     }
     if (compareList.length === 0) {
-      localStorage.removeItem;
+      localStorage.removeItem('compareList');
     }
   }, [compareList]);
 
@@ -48,7 +50,7 @@ const HouseProperties = () => {
     );
   }
 
-  // Destructure houseData
+
   const {
     img,
     small_description,

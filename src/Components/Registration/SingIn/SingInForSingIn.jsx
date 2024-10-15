@@ -26,7 +26,6 @@ const SingInForSingIn = ({ singInSingUpHandle }) => {
     const usrForm = e.target;
     const userEmail = usrForm.email.value;
     const userPassword = usrForm.password.value;
-    console.log(userPassword, userEmail);
   };
 
   return (

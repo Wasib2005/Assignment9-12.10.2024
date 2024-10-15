@@ -5,14 +5,12 @@ import { filterAnObjArray } from "../../../utilities/FilterAnObjArray";
 
 const RentPlacesList = () => {
   const { typeId } = useParams();
-  console.log(typeId);
+
   const houseData = useLoaderData();
   const [houseFilteredData, setHouseFilteredData] = useState([]);
 
   useEffect(() => {
     let tempHouseFilteredData;
-
-    console.log(1, typeId);
 
     if (typeId === "all") {
       setHouseFilteredData(houseData);
@@ -20,28 +18,28 @@ const RentPlacesList = () => {
       tempHouseFilteredData = filterAnObjArray(houseData, [["type", "Family"]]);
       setHouseFilteredData(tempHouseFilteredData);
     } else if (typeId === "student") {
-      console.log(12314);
+
       tempHouseFilteredData = filterAnObjArray(houseData, [
         ["type", "Student"],
       ]);
       setHouseFilteredData(tempHouseFilteredData);
     } else if (typeId === "single") {
-      console.log(12314);
+
       tempHouseFilteredData = filterAnObjArray(houseData, [["type", "Single"]]);
       setHouseFilteredData(tempHouseFilteredData);
     } else if (typeId === "couple") {
-      console.log(12314);
+
       tempHouseFilteredData = filterAnObjArray(houseData, [["type", "Couple"]]);
       setHouseFilteredData(tempHouseFilteredData);
     } else if (typeId === "SeniorCitizen") {
-      console.log(12314);
+
       tempHouseFilteredData = filterAnObjArray(houseData, [
         ["type", "Senior Citizen"],
       ]);
       setHouseFilteredData(tempHouseFilteredData);
     }
 
-    console.log(2, tempHouseFilteredData);
+
   }, [houseData, typeId]);
   return (
     <div className="mt-14 mb-28 text-left">
