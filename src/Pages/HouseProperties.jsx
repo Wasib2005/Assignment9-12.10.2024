@@ -1,28 +1,51 @@
 import { useEffect, useState } from "react";
 import { IoLogoUsd } from "react-icons/io";
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import { saveToLS, takeFromLS } from "../utilities/LS";
 
 const HouseProperties = () => {
   const Data = useLoaderData();
   const { houseId } = useParams();
-  const [houseData, SetHouseData] = useState({});
+  const [houseData, setHouseData] = useState({});
+  const [compareList, setCompareList] = useState(
+    () => takeFromLS("compareList") || []
+  );
 
   useEffect(() => {
-    SetHouseData(Data.find((data) => data.id === Number(houseId)));
+    setHouseData(Data.find((data) => data.id === Number(houseId)));
   }, [Data, houseId]);
 
-  if (!(Data.length >= houseId)) {
+  const compareHandle = () => {
+    if (compareList.includes(houseData.id)) {
+      setCompareList(compareList.filter((item) => item !== houseData.id));
+    } else {
+      setCompareList([...compareList, houseData.id]);
+    }
+  };
+
+  useEffect(() => {
+    if (compareList.length) {
+      saveToLS("compareList", compareList);
+    }
+    if (compareList.length === 0) {
+      localStorage.removeItem;
+    }
+  }, [compareList]);
+
+  if (!houseData) {
     return (
       <div className="text-center">
         <h1 className="flex justify-center items-center h-52 mt-14 text-4xl font-bold text-red-700">
           No data is found
-        </h1>{" "}
+        </h1>
         <Link to={-1}>
-          <button className="btn btn-outline btn-success">Go beck</button>
+          <button className="btn btn-outline btn-success">Go back</button>
         </Link>
       </div>
     );
   }
+
+  // Destructure houseData
   const {
     img,
     small_description,
@@ -44,24 +67,11 @@ const HouseProperties = () => {
     rent,
   } = houseData;
 
-  if (houseId === undefined) {
-    return (
-      <div className="text-center">
-        <h1 className="flex justify-center items-center h-52 mt-14 text-4xl font-bold text-red-700">
-          Data base problem
-        </h1>{" "}
-        <Link to={-1}>
-          <button className="btn btn-outline btn-success">Go beck</button>
-        </Link>
-      </div>
-    );
-  }
-  console.log(houseData);
   return (
     <div>
-      <div className="mt-32  text-center grid justify-center gap-7 mb-[150px] mx-2">
-        <h1 className="text-3xl lg:text-5xl font-bold"> {segment_name}</h1>
-        <div className=" m-auto md:w-[800px] lg:w-[1150px]  bg-slate-400">
+      <div className="mt-32 text-center grid justify-center gap-7 mb-[150px] mx-2">
+        <h1 className="text-3xl lg:text-5xl font-bold">{segment_name}</h1>
+        <div className="m-auto md:w-[800px] lg:w-[1150px] bg-slate-400">
           <img
             src={img}
             alt="House img!!!"
@@ -71,9 +81,9 @@ const HouseProperties = () => {
         <div className="text-left grid gap-6">
           <h1 className="text-3xl lg:text-5xl font-bold">House No. {id}</h1>
           <hr className="border-dashed" />
-          <p> {small_description} </p>
+          <p>{small_description}</p>
           <hr className="border-dashed" />
-          <p> {big_description} </p>
+          <p>{big_description}</p>
           <hr />
           <p>
             Idle for <span className="font-bold">{type}</span>
@@ -81,77 +91,65 @@ const HouseProperties = () => {
           <hr />
           <div>
             <div className="grid gap-2 w-[400px]">
-              <p className="flex justify-between ">
-                <span>Total rooms:</span>{" "}
-                <span className="font-bold">{totalRooms}</span>
-              </p>
-              <p className="flex justify-between ">
-                <span>Total Bed rooms:</span>{" "}
-                <span className="font-bold">{bedrooms}</span>
-              </p>
-              <p className="flex justify-between ">
-                <span>Total Bath rooms:</span>{" "}
-                <span className="font-bold">{bathrooms}</span>
-              </p>
-              <p className="flex justify-between ">
-                <span>Square Footage:</span>{" "}
-                <span className="font-bold">
-                  {squareFootage ? squareFootage : "-"}
-                </span>
-              </p>
-              <p className="flex justify-between ">
-                <span>Build Date:</span>{" "}
-                <span className="font-bold">{buildDate}</span>
-              </p>
-              <p className="flex justify-between ">
-                <span>Available From:</span>{" "}
-                <span className="font-bold">{availableFrom}</span>
-              </p>
-              <p className="flex justify-between ">
-                <span>Rent:</span>{" "}
-                <span className="font-bold">
+              <div className="flex justify-between">
+                <p>Total rooms:</p> <p className="font-bold">{totalRooms}</p>
+              </div>
+              <div className="flex justify-between">
+                <p>Total Bed rooms:</p> <p className="font-bold">{bedrooms}</p>
+              </div>
+              <div className="flex justify-between">
+                <p>Total Bath rooms:</p>{" "}
+                <p className="font-bold">{bathrooms}</p>
+              </div>
+              <div className="flex justify-between">
+                <p>Square Footage:</p>{" "}
+                <p className="font-bold">{squareFootage || "-"}</p>
+              </div>
+              <div className="flex justify-between">
+                <p>Build Date:</p> <p className="font-bold">{buildDate}</p>
+              </div>
+              <div className="flex justify-between">
+                <p>Available From:</p>{" "}
+                <p className="font-bold">{availableFrom}</p>
+              </div>
+              <div className="flex justify-between">
+                <p>Rent:</p>
+                <div className="font-bold">
                   {rent ? (
-                    <>
-                      <div className="flex items-center justify-end ">
-                        <p>{rent}</p>
-                        <IoLogoUsd size={14} />
-                      </div>
-                    </>
+                    <div className="flex items-center justify-end">
+                      <div>{rent}</div>
+                      <IoLogoUsd size={14} />
+                    </div>
                   ) : (
                     "-"
                   )}
-                </span>
-              </p>
+                </div>
+              </div>
             </div>
-            <p className="flex justify-between w-1/3 text-xl items-center mt-3">
-              Services:{" "}
-              <span className="flex gap-2 text-xl ">
+            <div className="flex justify-between w-1/3 text-xl items-center mt-3">
+              Services:
+              <div className="flex gap-2 text-xl">
                 {services__electricity && (
-                  <span className=" badge badge-success text-white gap-2">
+                  <p className="badge badge-success text-white gap-2">
                     Electricity
-                  </span>
+                  </p>
                 )}
                 {services__gas && (
-                  <span className=" badge badge-success text-white  gap-2">
-                    Gas
-                  </span>
+                  <p className="badge badge-success text-white gap-2">Gas</p>
                 )}
                 {services__water && (
-                  <span className=" badge badge-success text-white gap-2">
-                    Water
-                  </span>
+                  <p className="badge badge-success text-white gap-2">Water</p>
                 )}
                 {services__internet && (
-                  <span className=" badge badge-success text-white gap-2">
+                  <p className="badge badge-success text-white gap-2">
                     Internet
-                  </span>
+                  </p>
                 )}
-              </span>
-            </p>
+              </div>
+            </div>
           </div>
           <hr className="border-dashed" />
-          <p className="text-lg ">
-            {" "}
+          <p className="text-lg">
             Location/Address:{" "}
             <span className="font-bold">{location__address}</span>
           </p>
@@ -163,33 +161,37 @@ const HouseProperties = () => {
                 className="relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-gray-800 rounded-md group"
               >
                 <span className="absolute inset-0 w-full h-full mt-1 ml-1 transition-all duration-300 ease-in-out bg-success rounded-md group-hover:mt-0 group-hover:ml-0" />
-                <span className="absolute inset-0 w-full h-full bg-slate-200 rounded-md " />
-                <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 bg-success rounded-md opacity-0 group-hover:opacity-100 " />
+                <span className="absolute inset-0 w-full h-full bg-slate-200 rounded-md" />
+                <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 bg-success rounded-md opacity-0 group-hover:opacity-100" />
                 <span className="relative text-success transition-colors duration-200 ease-in-out delay-100 group-hover:text-white font-bold">
                   Book Now
                 </span>
               </Link>
             </button>
-            <button>
-              <spam className="relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-gray-800 rounded-md group">
-                <span className="absolute inset-0 w-full h-full mt-1 ml-1 transition-all duration-300 ease-in-out bg-info rounded-md group-hover:mt-0 group-hover:ml-0" />
-                <span className="absolute inset-0 w-full h-full bg-slate-200 rounded-md " />
-                <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 bg-info rounded-md opacity-0 group-hover:opacity-100 " />
-                <span className="relative text-info transition-colors duration-200 ease-in-out delay-100 group-hover:text-white font-bold">
-                  Compare
+            <button onClick={compareHandle}>
+              <span className="relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-gray-800 rounded-md group">
+                <span
+                  className={`absolute inset-0 w-full h-full mt-1 ml-1 transition-all duration-300 ease-in-out ${compareList.includes(id)?"bg-error":"bg-info"} rounded-md group-hover:mt-0 group-hover:ml-0`}
+                />
+                <span className="absolute inset-0 w-full h-full bg-slate-200 rounded-md" />
+                <span className={`absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 ${compareList.includes(id)?"bg-error":"bg-info"} rounded-md opacity-0 group-hover:opacity-100`} />
+                <span className={`relative ${compareList.includes(id)?"text-error":"text-info"} transition-colors duration-200 ease-in-out delay-100 group-hover:text-white font-bold`}>
+                  {compareList.includes(id)
+                    ? "Remove from Compare List"
+                    : "Add to Compare List"}
                 </span>
-              </spam>
+              </span>
             </button>
             <button>
               <Link
                 to={-1}
                 className="relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-gray-800 rounded-md group"
               >
-                <span className="absolute inset-0 w-full h-full mt-1 ml-1 transition-all duration-300 ease-in-out bg-info rounded-md group-hover:mt-0 group-hover:ml-0" />
-                <span className="absolute inset-0 w-full h-full bg-slate-200 rounded-md " />
-                <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 bg-info rounded-md opacity-0 group-hover:opacity-100 " />
-                <span className="relative text-info transition-colors duration-200 ease-in-out delay-100 group-hover:text-white font-bold">
-                  Go Beck
+                <span className="absolute inset-0 w-full h-full mt-1 ml-1 transition-all duration-300 ease-in-out bg-secondary rounded-md group-hover:mt-0 group-hover:ml-0" />
+                <span className="absolute inset-0 w-full h-full bg-slate-200 rounded-md" />
+                <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 bg-secondary rounded-md opacity-0 group-hover:opacity-100" />
+                <span className="relative text-secondary transition-colors duration-200 ease-in-out delay-100 group-hover:text-white font-bold">
+                  Go Back
                 </span>
               </Link>
             </button>
