@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { IoLogoUsd } from "react-icons/io";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { saveToLS, takeFromLS } from "../utilities/LS";
+import { toast } from "react-toastify";
 
 const HouseProperties = () => {
   const Data = useLoaderData();
@@ -18,7 +19,9 @@ const HouseProperties = () => {
   const compareHandle = () => {
     if (compareList.includes(houseData.id)) {
       setCompareList(compareList.filter((item) => item !== houseData.id));
+      toast.error(` House No. ${id} has been removed from Compare List`)
     } else {
+      toast.success(` House No. ${id} has been added from Compare List`)
       setCompareList([...compareList, houseData.id]);
     }
   };
