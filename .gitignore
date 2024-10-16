@@ -23,4 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 
-src/utilities/SingIn&SingUp.jsx
+src/utilities/SingIn_SingUp.jsx
