@@ -16,7 +16,6 @@ const HouseComparison = () => {
     );
     setCompareData(tempCompareList);
   }, [compareList, houseData]);
-  console.log(compareData.includes(undefined) || compareData.length >= 1);
 
   if (compareData.includes(undefined) || compareData.length <= 1) {
     return (

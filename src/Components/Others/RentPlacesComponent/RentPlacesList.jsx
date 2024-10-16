@@ -4,9 +4,13 @@ import { useEffect, useState } from "react";
 import { filterAnObjArray } from "../../../utilities/FilterAnObjArray";
 
 const RentPlacesList = () => {
+
   const { typeId } = useParams();
 
   const houseData = useLoaderData();
+
+  console.log(houseData)
+  
   const [houseFilteredData, setHouseFilteredData] = useState([]);
 
   useEffect(() => {

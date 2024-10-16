@@ -5,12 +5,11 @@ import RentPlaces from "../Pages/RentPlaces";
 import UserLog from "../Pages/UserLog";
 import RentPlacesList from "../Components/Others/RentPlacesComponent/RentPlacesList";
 import HouseProperties from "../Pages/HouseProperties";
-import { element } from "prop-types";
+
 import HouseComparison from "../Pages/HouseComparison";
 
 export const MainRouter = createBrowserRouter([
   {
-    path: "/",
     element: <MainFrame />,
     children: [
       {
