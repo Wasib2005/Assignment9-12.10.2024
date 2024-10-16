@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import PropTypes from "prop-types";
 import {
   FaFacebookF,
@@ -7,8 +7,14 @@ import {
   FaRegEye,
 } from "react-icons/fa";
 import { RiEyeCloseLine } from "react-icons/ri";
+import { RegistrationContext } from "../../../Context/RegistrationProvider";
+import { toast } from "react-toastify";
 
-const SingUpForSingUp = ({singInSingUpHandle}) => {
+const SingUpForSingUp = ({ singInSingUpHandle }) => {
+  const { user, createUser } = useContext(RegistrationContext);
+
+  console.log(user, createUser);
+
   const [showPassword, setShowPassword] = useState(false);
 
   const handleShowPassword = () => {
@@ -61,13 +67,17 @@ const SingUpForSingUp = ({singInSingUpHandle}) => {
         "PasswordError",
         "You have to use at least one special character  (@#$%^&*+)"
       );
-    } else if (userPassword !== userConformPassword) {
-      showError("PasswordError", "The passwords don't match");
-      return;
-    }
+    } 
+    
+    // else if (userPassword !== userConformPassword) {
+    //   showError("PasswordError", "The passwords don't match");
+    //   return;
+    // }
     console.log(userPassword.split("").includes(""));
 
-    // here
+    createUser(userEmail, userPassword)
+      .then((result) => toast.success(`Thanks for Sing up with us!!! ${(result.user.email)} `))
+      .catch((error) => toast.error(error.code==="auth/email-already-in-use"&&`The email ${(userEmail)} already exist`));
   };
 
   return (
@@ -91,7 +101,7 @@ const SingUpForSingUp = ({singInSingUpHandle}) => {
           type="text"
           name="name"
           className="p-3 bg-slate-300 focus:outline-none focus:outline-success"
-          required
+          // required
         />
         <small
           id="NameError"
@@ -118,7 +128,7 @@ const SingUpForSingUp = ({singInSingUpHandle}) => {
             required
           />
           <div
-             onClick={singInSingUpHandle}
+            onClick={handleShowPassword}
             className="absolute top-[10px] right-3 hover:bg-slate-100 rounded-full"
           >
             {showPassword ? (
@@ -139,7 +149,7 @@ const SingUpForSingUp = ({singInSingUpHandle}) => {
             type="password"
             name="ConformPassword"
             className="p-3 bg-slate-300 w-full  focus:outline-none focus:outline-success"
-            required
+            // required
           />
           <div
             onClick={handleShowPassword}

@@ -1,5 +1,6 @@
-import { useState } from "react";
+
 import PropTypes from "prop-types";
+import { useState } from "react";
 import {
   FaFacebookF,
   FaGithubSquare,
@@ -7,6 +8,7 @@ import {
   FaRegEye,
 } from "react-icons/fa";
 import { RiEyeCloseLine } from "react-icons/ri";
+
 
 const SingInForSingIn = ({ singInSingUpHandle }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -26,6 +28,7 @@ const SingInForSingIn = ({ singInSingUpHandle }) => {
     const usrForm = e.target;
     const userEmail = usrForm.email.value;
     const userPassword = usrForm.password.value;
+
   };
 
   return (
@@ -85,7 +88,10 @@ const SingInForSingIn = ({ singInSingUpHandle }) => {
             Sing In
           </button>
         </form>
-        <p className="m-auto w-[70%]">Or, If you already sing up then you can login by using your old password. <span className="font-bold">Click Bellow!!!</span></p>
+        <p className="m-auto w-[70%]">
+          Or, If you already sing up then you can login by using your old
+          password. <span className="font-bold">Click Bellow!!!</span>
+        </p>
         <button
           onClick={singInSingUpHandle}
           className=" m-auto btn btn-outline rounded-3xl w-1/3 text-info font-bold lg:hidden"

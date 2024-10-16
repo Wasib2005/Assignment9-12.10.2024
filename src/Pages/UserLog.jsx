@@ -7,11 +7,14 @@ import { Link } from "react-router-dom";
 import { MdHomeWork } from "react-icons/md";
 
 const UserLog = () => {
-  const [singIn, setSingIn] = useState(true);
+  const [singIn, setSingIn] = useState(false);
+
   document.querySelector("html").setAttribute("data-theme", "light");
+
   const singInSingUpHandle = () => {
     setSingIn(!singIn);
   };
+
   return (
     <>
       <Link to={"/"} className="">

@@ -5,10 +5,13 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import { MainRouter } from "./Routers/MainRouter.jsx";
 import Toast from "./Components/Toast.jsx";
+import RegistrationProvider from "./Context/RegistrationProvider.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Toast />
-    <RouterProvider router={MainRouter} />
+    <RegistrationProvider>
+      <Toast />
+      <RouterProvider router={MainRouter} />
+    </RegistrationProvider>
   </StrictMode>
 );
