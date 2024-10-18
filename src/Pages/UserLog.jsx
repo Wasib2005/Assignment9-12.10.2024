@@ -34,7 +34,7 @@ const UserLog = () => {
           <span>
             <span className="text-blue-700">Rent</span>
             <span className=" bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">
-              Buy
+              .com
             </span>
           </span>
         </button>

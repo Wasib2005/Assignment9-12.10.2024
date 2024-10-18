@@ -20,7 +20,7 @@ export const MainRouter = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("data.json"),
+        loader: () => fetch("/public/data.json"),
       },
       {
         path: "rentPlaces",

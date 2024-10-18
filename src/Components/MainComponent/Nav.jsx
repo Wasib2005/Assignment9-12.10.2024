@@ -100,11 +100,11 @@ const Nav = () => {
               </ul>
             </div>
             <Link to={"/"}>
-              <button className="btn btn-ghost flex gap-0 text-3xl font-bold">
+              <button className="btn btn-ghost flex gap-0 text-3xl font-bold text-black">
                 <MdHomeWork />
                 <span className="text-blue-700">Rent</span>
                 <span className=" bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">
-                  Buy
+                  .com
                 </span>
               </button>
             </Link>
