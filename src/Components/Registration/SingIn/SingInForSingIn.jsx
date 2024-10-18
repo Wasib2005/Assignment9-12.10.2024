@@ -1,6 +1,5 @@
-
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import {
   FaFacebookF,
   FaGithubSquare,
@@ -8,10 +7,18 @@ import {
   FaRegEye,
 } from "react-icons/fa";
 import { RiEyeCloseLine } from "react-icons/ri";
-
+import { RegistrationContext } from "../../../Context/RegistrationProvider";
+import { toast } from "react-toastify";
 
 const SingInForSingIn = ({ singInSingUpHandle }) => {
   const [showPassword, setShowPassword] = useState(false);
+
+  const {
+    singInUser,
+    SingInOrSingUpWithGoogle,
+    SingInOrSingUpWithGitHub,
+    SingInOrSingUpWithFacebook,
+  } = useContext(RegistrationContext);
 
   const handleShowPassword = () => {
     const tempShowPassword = !showPassword;
@@ -28,7 +35,14 @@ const SingInForSingIn = ({ singInSingUpHandle }) => {
     const usrForm = e.target;
     const userEmail = usrForm.email.value;
     const userPassword = usrForm.password.value;
-
+    singInUser(userEmail, userPassword)
+      .then((result) => toast(`Welcome back ${result.user.email} `))
+      .catch((error) =>
+        toast.error(
+          error.code === "auth/invalid-credential" &&
+            `Wrong Email or Password or maybe you are a new friend`
+        )
+      );
   };
 
   return (
@@ -36,13 +50,22 @@ const SingInForSingIn = ({ singInSingUpHandle }) => {
       <div className=" grid gap-6 p-[50px] lg:p-[100px] w-full lg:w-1/2 animate-fade">
         <h1 className="text-6xl font-extrabold">Sing In</h1>
         <div className="flex gap-2 justify-center">
-          <div className="flex items-center border rounded-full p-3 hover:bg-blue-200 ">
+          <div
+            onClick={SingInOrSingUpWithFacebook}
+            className="flex items-center border rounded-full  p-3 hover:bg-green-200"
+          >
             <FaFacebookF size={35} />
           </div>
-          <div className="flex items-center border rounded-full p-3 hover:bg-blue-200 ">
+          <div
+            onClick={SingInOrSingUpWithGoogle}
+            className="flex items-center border rounded-full p-3 hover:bg-blue-200 "
+          >
             <FaGoogle size={35} />
           </div>
-          <div className="flex items-center border rounded-full p-3 hover:bg-blue-200 ">
+          <div
+            onClick={SingInOrSingUpWithGitHub}
+            className="flex items-center border rounded-full p-3 hover:bg-blue-200 "
+          >
             <FaGithubSquare size={35} />
           </div>
         </div>
@@ -88,16 +111,6 @@ const SingInForSingIn = ({ singInSingUpHandle }) => {
             Sing In
           </button>
         </form>
-        <p className="m-auto w-[70%]">
-          Or, If you already sing up then you can login by using your old
-          password. <span className="font-bold">Click Bellow!!!</span>
-        </p>
-        <button
-          onClick={singInSingUpHandle}
-          className=" m-auto btn btn-outline rounded-3xl w-1/3 text-info font-bold lg:hidden"
-        >
-          Sing In
-        </button>
       </div>
     </>
   );

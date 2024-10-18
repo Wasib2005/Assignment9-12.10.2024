@@ -7,6 +7,7 @@ import RentPlacesList from "../Components/Others/RentPlacesComponent/RentPlacesL
 import HouseProperties from "../Pages/HouseProperties";
 
 import HouseComparison from "../Pages/HouseComparison";
+import UsersVerification from "../Pages/usersVerification";
 
 export const MainRouter = createBrowserRouter([
   {
@@ -43,5 +44,9 @@ export const MainRouter = createBrowserRouter([
   {
     path: "/Registration",
     element: <UserLog />,
+  },
+  {
+    path: "/usersVerification",
+    element: <UsersVerification />,
   },
 ]);

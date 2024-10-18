@@ -9,11 +9,17 @@ import {
 import { RiEyeCloseLine } from "react-icons/ri";
 import { RegistrationContext } from "../../../Context/RegistrationProvider";
 import { toast } from "react-toastify";
+import { Navigate } from "react-router-dom";
 
-const SingUpForSingUp = ({ singInSingUpHandle }) => {
-  const { user, createUser } = useContext(RegistrationContext);
-
-  console.log(user, createUser);
+const SingUpForSingUp = () => {
+  const {
+    user,
+    createUser,
+    updateUserProfile,
+    SingInOrSingUpWithGoogle,
+    SingInOrSingUpWithGitHub,
+    SingInOrSingUpWithFacebook,
+  } = useContext(RegistrationContext);
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -29,68 +35,76 @@ const SingUpForSingUp = ({ singInSingUpHandle }) => {
     }
   };
 
-  const showError = (where, what = "") => {
-    document.getElementById(where).innerText = what;
-  };
-
   const handleSingIn = (e) => {
     e.preventDefault();
     const usrForm = e.target;
-    const userName = usrForm.name.value;
+    const displayName = usrForm.name.value;
+    const profileInfoObj = { displayName };
+
+    console.log(profileInfoObj);
     const userEmail = usrForm.email.value;
     const userPassword = usrForm.password.value;
     const userConformPassword = usrForm.ConformPassword.value;
-    console.log(userName, userPassword, userEmail, userPassword.length);
-    const passwordLength = 10;
+
+    const passwordLength = 8;
     if (userPassword.length <= passwordLength) {
-      showError(
-        "PasswordError",
-        `The password must be more then ${passwordLength}`
-      );
+      toast.error(`The password must be more then ${passwordLength}`);
       return;
-    } else if (userPassword === userConformPassword) {
-      showError("PasswordError", "");
     } else if (!/[0-9]/.test(userPassword)) {
-      showError("PasswordError", "You have to use at least one digit (0-9)");
+      toast.error("You have to use at least one digit (0-9)");
+      return;
     } else if (!/[A-Z]/.test(userPassword)) {
-      showError(
-        "PasswordError",
-        "You have to use at least one uppercase  (A-Z)"
-      );
+      toast.error("You have to use at least one uppercase  (A-Z)");
+      return;
     } else if (!/[a-z]/.test(userPassword)) {
-      showError(
-        "PasswordError",
-        "You have to use at least one lowercase  (a-z)"
-      );
+      toast.error("You have to use at least one lowercase  (a-z)");
+      return;
     } else if (!/[@#$%^&*(){}+-=?<>,.`~']/.test(userPassword)) {
-      showError(
-        "PasswordError",
-        "You have to use at least one special character  (@#$%^&*+)"
-      );
-    } 
-    
-    // else if (userPassword !== userConformPassword) {
-    //   showError("PasswordError", "The passwords don't match");
-    //   return;
-    // }
-    console.log(userPassword.split("").includes(""));
+      toast.error("You have to use at least one special character");
+      return;
+    } else if (userPassword !== userConformPassword) {
+      toast.error("The passwords don't match");
+      return;
+    }
 
     createUser(userEmail, userPassword)
-      .then((result) => toast.success(`Thanks for Sing up with us!!! ${(result.user.email)} `))
-      .catch((error) => toast.error(error.code==="auth/email-already-in-use"&&`The email ${(userEmail)} already exist`));
+      .then((result) => {
+        updateUserProfile(profileInfoObj);
+        toast(
+          `Thanks for Sing up with us!!! ${
+            result.user.displayName || result.user.email
+          } `
+        );
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error(
+          error.code === "auth/email-already-in-use" &&
+            `The email ${userEmail} already exist`
+        );
+      });
   };
 
   return (
     <div className="grid gap-6 p-[36px] w-full lg:w-1/2 animate-fade">
       <h1 className="text-6xl font-extrabold">Sing Up</h1>
       <div className="flex gap-2 justify-center">
-        <div className="flex items-center border rounded-full  p-3 hover:bg-green-200">
+        <div
+          onClick={SingInOrSingUpWithFacebook}
+          className="flex items-center border rounded-full  p-3 px-5 hover:bg-green-200"
+        >
           <FaFacebookF size={35} />
         </div>
-        <div className="flex items-center border rounded-full  p-3 hover:bg-green-200">
+        <div
+          onClick={SingInOrSingUpWithGoogle}
+          className="flex items-center border rounded-full  p-3 px-5 hover:bg-green-200"
+        >
           <FaGoogle size={35} />
         </div>
-        <div className="flex items-center border rounded-full  p-3 hover:bg-green-200">
+        <div
+          onClick={SingInOrSingUpWithGitHub}
+          className="flex items-center border rounded-full  p-3 px-5 hover:bg-green-200"
+        >
           <FaGithubSquare size={35} />
         </div>
       </div>
@@ -101,12 +115,8 @@ const SingUpForSingUp = ({ singInSingUpHandle }) => {
           type="text"
           name="name"
           className="p-3 bg-slate-300 focus:outline-none focus:outline-success"
-          // required
+          required
         />
-        <small
-          id="NameError"
-          className="text-red-600 text-left font-bold"
-        ></small>
         <input
           placeholder="Enter Email"
           type="email"
@@ -114,10 +124,6 @@ const SingUpForSingUp = ({ singInSingUpHandle }) => {
           className="p-3 bg-slate-300  focus:outline-none focus:outline-success"
           required
         />
-        <small
-          id="EmailError"
-          className="text-red-600 text-left font-bold"
-        ></small>
         <div className="flex relative">
           <input
             id="password"
@@ -138,10 +144,6 @@ const SingUpForSingUp = ({ singInSingUpHandle }) => {
             )}
           </div>
         </div>
-        <small
-          id="PasswordError"
-          className="text-red-600 text-left font-bold"
-        ></small>
         <div className="flex relative">
           <input
             id="ConformPassword"
@@ -149,7 +151,7 @@ const SingUpForSingUp = ({ singInSingUpHandle }) => {
             type="password"
             name="ConformPassword"
             className="p-3 bg-slate-300 w-full  focus:outline-none focus:outline-success"
-            // required
+            required
           />
           <div
             onClick={handleShowPassword}
@@ -169,16 +171,6 @@ const SingUpForSingUp = ({ singInSingUpHandle }) => {
           Sing Up
         </button>
       </form>
-      <p>
-        If you are new then you can sing up.{" "}
-        <span className="font-bold">Click Below!!!</span>
-      </p>
-      <button
-        onClick={singInSingUpHandle}
-        className=" m-auto btn btn-outline rounded-3xl w-1/3 text-success font-bold lg:hidden"
-      >
-        Sing In
-      </button>
     </div>
   );
 };

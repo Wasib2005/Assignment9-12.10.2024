@@ -1,19 +1,30 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import SingInForSingIn from "../Components/Registration/SingIn/SingInForSingIn";
 import SingInForSingUp from "../Components/Registration/SingIn/SingInForSingUp";
 import SingUpForSingIn from "../Components/Registration/SingUp/SingUpForSingIn";
 import SingUpForSingUp from "../Components/Registration/SingUp/SingUpForSingUp";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { MdHomeWork } from "react-icons/md";
+import { RegistrationContext } from "../Context/RegistrationProvider";
 
 const UserLog = () => {
-  const [singIn, setSingIn] = useState(false);
+  const [singIn, setSingIn] = useState(true);
+  const { user } = useContext(RegistrationContext);
 
   document.querySelector("html").setAttribute("data-theme", "light");
 
   const singInSingUpHandle = () => {
     setSingIn(!singIn);
   };
+
+  if (user) {
+    if (!user.emailVerified) {
+      return <Navigate to={"/usersVerification"} />;
+    } else if(user.emailVerified){
+      return <Navigate to={'/'} />;
+
+    }
+  }
 
   return (
     <>

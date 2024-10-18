@@ -9,7 +9,7 @@ const RentPlacesList = () => {
 
   const houseData = useLoaderData();
 
-  console.log(houseData)
+
   
   const [houseFilteredData, setHouseFilteredData] = useState([]);
 
