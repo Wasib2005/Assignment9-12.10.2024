@@ -5,22 +5,14 @@ import { Link, NavLink } from "react-router-dom";
 import { saveToLS, takeFromLS } from "../../utilities/LS";
 import { MdHomeWork } from "react-icons/md";
 import { RegistrationContext } from "../../Context/RegistrationProvider";
-import { toast } from "react-toastify";
+
 
 const Nav = () => {
   const [theme, setTheme] = useState("");
   const { user, userSingOut, usersVerification } =
     useContext(RegistrationContext);
 
-  const handleSingOut = () => {
-    userSingOut()
-      .then((result) => console.log(result))
-      .catch((error) => {
-        console.log(error.code);
-        return;
-      });
-    toast.warn("Good bye for now");
-  };
+
 
   const handleTheme = () => {
     if (theme === "light") {
@@ -151,7 +143,7 @@ const Nav = () => {
                   } m-1`}
                 >
                   {user.photoURL ? (
-                    <img src={user.photoURL} alt="Photo" className="rounded-full "/>
+                    <img src={user.photoURL} alt={user.displayName} className="rounded-full "/>
                   ) : (
                     <h1 className="uppercase font-bold ">
                       {user.displayName

@@ -8,15 +8,19 @@ import HouseProperties from "../Pages/HouseProperties";
 
 import HouseComparison from "../Pages/HouseComparison";
 import UsersVerification from "../Pages/usersVerification";
+import HouseBooking from "../Components/HouseBooking";
+import PrivateComponentProvider from "../Components/PrivateComponentProvider";
+import Error404 from "../Pages/error404";
 
 export const MainRouter = createBrowserRouter([
   {
     element: <MainFrame />,
+    errorElement: <Error404 />,
     children: [
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("/public/data.json"),
+        loader: () => fetch("data.json"),
       },
       {
         path: "rentPlaces",
@@ -38,6 +42,14 @@ export const MainRouter = createBrowserRouter([
         path: "comparison",
         element: <HouseComparison />,
         loader: () => fetch("/public/data.json"),
+      },
+      {
+        path: "/bookNow/house/:houseId",
+        element: (
+          <PrivateComponentProvider>
+            <HouseBooking />
+          </PrivateComponentProvider>
+        ),
       },
     ],
   },

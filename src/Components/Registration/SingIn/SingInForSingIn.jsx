@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useContext, useState } from "react";
 import {
   FaFacebookF,
@@ -10,7 +9,7 @@ import { RiEyeCloseLine } from "react-icons/ri";
 import { RegistrationContext } from "../../../Context/RegistrationProvider";
 import { toast } from "react-toastify";
 
-const SingInForSingIn = ({ singInSingUpHandle }) => {
+const SingInForSingIn = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const {
@@ -114,9 +113,6 @@ const SingInForSingIn = ({ singInSingUpHandle }) => {
       </div>
     </>
   );
-};
-SingInForSingIn.propTypes = {
-  singInSingUpHandle: PropTypes.func.isRequired,
 };
 
 export default SingInForSingIn;

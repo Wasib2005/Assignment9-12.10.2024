@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { takeFromLS } from "../utilities/LS";
 import { Link, useLoaderData } from "react-router-dom";
+import RemoveFromHouseComparison from "../Components/RemoveFromHouseComparison";
 
 const HouseComparison = () => {
   const houseData = useLoaderData();
@@ -19,8 +20,8 @@ const HouseComparison = () => {
 
   if (compareData.includes(undefined) || compareData.length <= 1) {
     return (
-      <div className="text-center">
-        <h1>No house information has been found in your comparison list</h1>
+      <div className="text-center mt-6">
+        <h1>No house information has been found in your comparison list (add 2 or more house)</h1>
       </div>
     );
   }
@@ -106,7 +107,23 @@ const HouseComparison = () => {
           <tr>
             {compareData.map((house) => (
               <th className="  p-2" key={house.id}>
-                <Link to={`/PlacesProperties/${house.id}`} className="underline underline-offset-2 hover:underline-offset-4">Click here for more information</Link>
+                <Link
+                  to={`/PlacesProperties/${house.id}`}
+                  className="underline underline-offset-2 hover:underline-offset-4"
+                >
+                  Click here for more information
+                </Link>
+              </th>
+            ))}
+          </tr>
+          <tr>
+            {compareData.map((house) => (
+              <th className="  p-2" key={house.id}>
+                <RemoveFromHouseComparison
+                  houseData={house}
+                  compareList={compareList}
+                  setCompareList={setCompareList}
+                />
               </th>
             ))}
           </tr>

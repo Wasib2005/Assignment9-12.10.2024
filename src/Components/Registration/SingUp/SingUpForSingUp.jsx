@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import PropTypes from "prop-types";
 import {
   FaFacebookF,
   FaGithubSquare,
@@ -9,11 +8,9 @@ import {
 import { RiEyeCloseLine } from "react-icons/ri";
 import { RegistrationContext } from "../../../Context/RegistrationProvider";
 import { toast } from "react-toastify";
-import { Navigate } from "react-router-dom";
 
 const SingUpForSingUp = () => {
   const {
-    user,
     createUser,
     updateUserProfile,
     SingInOrSingUpWithGoogle,
@@ -41,7 +38,6 @@ const SingUpForSingUp = () => {
     const displayName = usrForm.name.value;
     const profileInfoObj = { displayName };
 
-    console.log(profileInfoObj);
     const userEmail = usrForm.email.value;
     const userPassword = usrForm.password.value;
     const userConformPassword = usrForm.ConformPassword.value;
@@ -173,10 +169,6 @@ const SingUpForSingUp = () => {
       </form>
     </div>
   );
-};
-
-SingUpForSingUp.propTypes = {
-  singInSingUpHandle: PropTypes.func.isRequired,
 };
 
 export default SingUpForSingUp;

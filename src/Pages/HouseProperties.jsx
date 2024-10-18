@@ -19,11 +19,9 @@ const HouseProperties = () => {
   const compareHandle = () => {
     if (compareList.includes(houseData.id)) {
       setCompareList(compareList.filter((item) => item !== houseData.id));
-      toast.error(` House No. ${id} has been removed from Compare List`)
-    }
-    
-    else {
-      toast.success(` House No. ${id} has been added from Compare List`)
+      toast.error(` House No. ${id} has been removed from Compare List`);
+    } else {
+      toast.success(` House No. ${id} has been added from Compare List`);
       setCompareList([...compareList, houseData.id]);
     }
   };
@@ -33,7 +31,7 @@ const HouseProperties = () => {
       saveToLS("compareList", compareList);
     }
     if (compareList.length === 0) {
-      localStorage.removeItem('compareList');
+      localStorage.removeItem("compareList");
     }
   }, [compareList]);
 
@@ -49,7 +47,6 @@ const HouseProperties = () => {
       </div>
     );
   }
-
 
   const {
     img,
@@ -162,7 +159,7 @@ const HouseProperties = () => {
           <div className="flex gap-4">
             <button>
               <Link
-                to={"bookNow"}
+                to={`/bookNow/house/${id}`}
                 className="relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-gray-800 rounded-md group"
               >
                 <span className="absolute inset-0 w-full h-full mt-1 ml-1 transition-all duration-300 ease-in-out bg-success rounded-md group-hover:mt-0 group-hover:ml-0" />
@@ -176,11 +173,21 @@ const HouseProperties = () => {
             <button onClick={compareHandle}>
               <span className="relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-gray-800 rounded-md group">
                 <span
-                  className={`absolute inset-0 w-full h-full mt-1 ml-1 transition-all duration-300 ease-in-out ${compareList.includes(id)?"bg-error":"bg-info"} rounded-md group-hover:mt-0 group-hover:ml-0`}
+                  className={`absolute inset-0 w-full h-full mt-1 ml-1 transition-all duration-300 ease-in-out ${
+                    compareList.includes(id) ? "bg-error" : "bg-info"
+                  } rounded-md group-hover:mt-0 group-hover:ml-0`}
                 />
                 <span className="absolute inset-0 w-full h-full bg-slate-200 rounded-md" />
-                <span className={`absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 ${compareList.includes(id)?"bg-error":"bg-info"} rounded-md opacity-0 group-hover:opacity-100`} />
-                <span className={`relative ${compareList.includes(id)?"text-error":"text-info"} transition-colors duration-200 ease-in-out delay-100 group-hover:text-white font-bold`}>
+                <span
+                  className={`absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 ${
+                    compareList.includes(id) ? "bg-error" : "bg-info"
+                  } rounded-md opacity-0 group-hover:opacity-100`}
+                />
+                <span
+                  className={`relative ${
+                    compareList.includes(id) ? "text-error" : "text-info"
+                  } transition-colors duration-200 ease-in-out delay-100 group-hover:text-white font-bold`}
+                >
                   {compareList.includes(id)
                     ? "Remove from Compare List"
                     : "Add to Compare List"}

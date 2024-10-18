@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Banner = ({ banner, i }) => {
   if (banner.img === undefined) {
@@ -18,8 +19,8 @@ const Banner = ({ banner, i }) => {
           </h1>
           <div>
             <button>
-              <a
-                href="#_"
+              <Link
+                to={'/rentPlaces/all'}
                 className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-green-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group"
               >
                 <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-green-600 group-hover:h-full"></span>
@@ -58,7 +59,7 @@ const Banner = ({ banner, i }) => {
                 <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
                   Explore More
                 </span>
-              </a>
+              </Link>
             </button>
           </div>
         </div>

@@ -24,15 +24,15 @@ const RegistrationProvider = ({ children }) => {
   const FacebookProvider = new FacebookAuthProvider();
 
   const SingInOrSingUpWithGoogle = () => {
-    console.log(1);
+
     signInWithPopup(auth, GoogleProvider)
-      .then((result) => console.log(result.user))
+      .then()
       .catch((error) => console.log(error));
   };
 
   const SingInOrSingUpWithGitHub = () => {
     signInWithPopup(auth, GitHubProvider)
-      .then((result) => console.log(result))
+      .then()
       .catch((error) => console.log(error));
   };
   const SingInOrSingUpWithFacebook = () => {
@@ -62,10 +62,10 @@ const RegistrationProvider = ({ children }) => {
   };
 
   const updateUserProfile = (data) => {
-    console.log(data);
+
 
     updateProfile(auth.currentUser, data)
-      .then((result) => console.log(result))
+      .then()
       .catch((error) => console.log(error));
   };
 
@@ -78,7 +78,7 @@ const RegistrationProvider = ({ children }) => {
     };
   }, []);
 
-  console.log(user);
+
 
   const authDates = {
     user,
