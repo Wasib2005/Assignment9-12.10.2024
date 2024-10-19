@@ -18,12 +18,9 @@ const UserLog = () => {
   };
 
   if (user) {
-    if (!user.emailVerified) {
-      return <Navigate to={"/usersVerification"} />;
-    } else if(user.emailVerified){
-      return <Navigate to={'/'} />;
 
-    }
+      return <Navigate to={'/profile'} />;
+
   }
 
   return (

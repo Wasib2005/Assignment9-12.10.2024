@@ -6,13 +6,10 @@ import { saveToLS, takeFromLS } from "../../utilities/LS";
 import { MdHomeWork } from "react-icons/md";
 import { RegistrationContext } from "../../Context/RegistrationProvider";
 
-
 const Nav = () => {
   const [theme, setTheme] = useState("");
   const { user, userSingOut, usersVerification } =
     useContext(RegistrationContext);
-
-
 
   const handleTheme = () => {
     if (theme === "light") {
@@ -99,6 +96,7 @@ const Nav = () => {
                 {navLinks}
               </ul>
             </div>
+
             <Link to={"/"}>
               <button className="btn btn-ghost flex gap-0 text-3xl font-bold text-black">
                 <MdHomeWork />
@@ -143,7 +141,11 @@ const Nav = () => {
                   } m-1`}
                 >
                   {user.photoURL ? (
-                    <img src={user.photoURL} alt={user.displayName} className="rounded-full "/>
+                    <img
+                      src={user.photoURL}
+                      alt={user.displayName}
+                      className="rounded-full w-12 h-12"
+                    />
                   ) : (
                     <h1 className="uppercase font-bold ">
                       {user.displayName
@@ -156,7 +158,9 @@ const Nav = () => {
                   tabIndex={0}
                   className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow grid gap-2"
                 >
-                  <li className="btn">Profile</li>
+                  <li className="btn">
+                    <Link to={"/profile"}>Profile</Link>
+                  </li>
                   <li onClick={userSingOut} className="btn">
                     Sing Out
                   </li>

@@ -24,7 +24,6 @@ const RegistrationProvider = ({ children }) => {
   const FacebookProvider = new FacebookAuthProvider();
 
   const SingInOrSingUpWithGoogle = () => {
-
     signInWithPopup(auth, GoogleProvider)
       .then()
       .catch((error) => console.log(error));
@@ -62,8 +61,6 @@ const RegistrationProvider = ({ children }) => {
   };
 
   const updateUserProfile = (data) => {
-
-
     updateProfile(auth.currentUser, data)
       .then()
       .catch((error) => console.log(error));
@@ -77,8 +74,6 @@ const RegistrationProvider = ({ children }) => {
       unSubscribe;
     };
   }, []);
-
-
 
   const authDates = {
     user,

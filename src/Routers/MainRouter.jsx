@@ -11,6 +11,7 @@ import UsersVerification from "../Pages/usersVerification";
 import HouseBooking from "../Components/HouseBooking";
 import PrivateComponentProvider from "../Components/PrivateComponentProvider";
 import Error404 from "../Pages/error404";
+import ProfileForme from "../Components/ProfileForme";
 
 export const MainRouter = createBrowserRouter([
   {
@@ -48,6 +49,14 @@ export const MainRouter = createBrowserRouter([
         element: (
           <PrivateComponentProvider>
             <HouseBooking />
+          </PrivateComponentProvider>
+        ),
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateComponentProvider>
+            <ProfileForme />
           </PrivateComponentProvider>
         ),
       },
