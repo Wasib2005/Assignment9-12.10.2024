@@ -1,8 +1,22 @@
-# React + Vite
+<div style="text-align: center;">
+  
+  # Rant.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  ![](public/RentBuy.svg)
 
-Currently, two official plugins are available:
+  ### This is a website design for renting houses.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  ## npm pkgs
+
+  - [Vite](https://vite.dev/)
+  - [TailwindCSS](https://tailwindcss.com/)
+  - [DaisyUI](https://daisyui.com/)
+  - [React Icons](https://react-icons.github.io/react-icons/)
+  - [React Router](https://reactrouter.com)
+  - [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
+  - [React Spinners](https://www.davidhu.io/react-spinners/)
+  - [Tailwindcss Animated](https://www.tailwindcss-animated.com/)
+  - [firebase](https://firebase.google.com/)
+  - [Prop Types](https://www.npmjs.com/package/prop-types)
+
+</div>
