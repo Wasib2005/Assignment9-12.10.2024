@@ -18,9 +18,7 @@ const UserLog = () => {
   };
 
   if (user) {
-
-      return <Navigate to={'/profile'} />;
-
+    return <Navigate to={"/profile"} />;
   }
 
   return (

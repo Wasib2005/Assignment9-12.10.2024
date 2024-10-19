@@ -21,10 +21,14 @@ const HouseComparison = () => {
   if (compareData.includes(undefined) || compareData.length <= 1) {
     return (
       <div className="text-center mt-6">
-        <h1>No house information has been found in your comparison list (add 2 or more house)</h1>
+        <h1>
+          No house information has been found in your comparison list (add 2 or
+          more house)
+        </h1>
       </div>
     );
   }
+
   return (
     <div className="text-center mt-24 grid gap-6 justify-center mb-28">
       <h1 className="font-bold text-2xl md:text-3xl lg:text-5xl">{`Here is your ${compareData.length} houses information in one place`}</h1>

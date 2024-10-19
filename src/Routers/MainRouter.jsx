@@ -7,11 +7,12 @@ import RentPlacesList from "../Components/Others/RentPlacesComponent/RentPlacesL
 import HouseProperties from "../Pages/HouseProperties";
 
 import HouseComparison from "../Pages/HouseComparison";
-import UsersVerification from "../Pages/usersVerification";
+
 import HouseBooking from "../Components/HouseBooking";
 import PrivateComponentProvider from "../Components/PrivateComponentProvider";
 import Error404 from "../Pages/error404";
 import ProfileForme from "../Components/ProfileForme";
+import UsersVerification from "../Pages/UsersVerification";
 
 export const MainRouter = createBrowserRouter([
   {

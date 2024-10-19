@@ -1,8 +1,10 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { RegistrationContext } from "../Context/RegistrationProvider";
 
 const ProfileForme = () => {
   const { user, updateUserProfile } = useContext(RegistrationContext);
+
+  
 
   const changeProfileInformation = (e) => {
     e.preventDefault();
