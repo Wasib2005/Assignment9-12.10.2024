@@ -3,13 +3,17 @@ import SingInForSingIn from "../Components/Registration/SingIn/SingInForSingIn";
 import SingInForSingUp from "../Components/Registration/SingIn/SingInForSingUp";
 import SingUpForSingIn from "../Components/Registration/SingUp/SingUpForSingIn";
 import SingUpForSingUp from "../Components/Registration/SingUp/SingUpForSingUp";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
 import { MdHomeWork } from "react-icons/md";
 import { RegistrationContext } from "../Context/RegistrationProvider";
+import Loader from "../Components/Others/Loader";
 
 const UserLog = () => {
   const [singIn, setSingIn] = useState(true);
-  const { user } = useContext(RegistrationContext);
+  const { user, isLoading } = useContext(RegistrationContext);
+  const location = useLocation();
+
+  console.log(location);
 
   document.querySelector("html").setAttribute("data-theme", "light");
 
@@ -17,8 +21,12 @@ const UserLog = () => {
     setSingIn(!singIn);
   };
 
+  if (isLoading) {
+    return <Loader />;
+  }
+
   if (user) {
-    return <Navigate to={"/profile"} />;
+    return <Navigate to={location?.state ? location.state : "/"} />;
   }
 
   return (

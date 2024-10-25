@@ -19,6 +19,8 @@ export const RegistrationContext = createContext(null);
 const RegistrationProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
+  const [isLoading, setIsLoading] = useState(true);
+
   const GoogleProvider = new GoogleAuthProvider();
   const GitHubProvider = new GithubAuthProvider();
   const FacebookProvider = new FacebookAuthProvider();
@@ -41,14 +43,19 @@ const RegistrationProvider = ({ children }) => {
   };
 
   const createUser = (email, password) => {
+    setIsLoading(true);
+
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const singInUser = (email, password) => {
+    setIsLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const usersVerification = () => {
+    setIsLoading(true);
+
     return sendEmailVerification(auth.currentUser).then(() =>
       toast.info(
         `An email is send to ${user.email}. check the mail and verify your email!!!`
@@ -57,10 +64,14 @@ const RegistrationProvider = ({ children }) => {
   };
 
   const userSingOut = () => {
+    setIsLoading(true);
+
     signOut(auth);
   };
 
   const updateUserProfile = (data) => {
+    setIsLoading(true);
+
     updateProfile(auth.currentUser, data)
       .then()
       .catch((error) => console.log(error));
@@ -69,14 +80,18 @@ const RegistrationProvider = ({ children }) => {
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      setIsLoading(false);
     });
     return () => {
       unSubscribe;
     };
   }, []);
 
+
+
   const authDates = {
     user,
+    isLoading,
     singInUser,
     userSingOut,
     createUser,
