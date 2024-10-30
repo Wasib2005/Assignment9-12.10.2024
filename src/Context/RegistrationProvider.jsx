@@ -83,7 +83,7 @@ const RegistrationProvider = ({ children }) => {
       setIsLoading(false);
     });
     return () => {
-      unSubscribe;
+      unSubscribe();
     };
   }, []);
 
